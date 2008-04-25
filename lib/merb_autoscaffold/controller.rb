@@ -32,14 +32,23 @@ module MerbAutoScaffold
     module InstanceMethods
       def self.included(base)
         base.class_eval {
-          unless instance_methods.include?('index')
+          class << self
+            attr_accessor :native_actions
+            def native_actions() @native_actions ||= []; end
+          end
+
+          if instance_methods.include?('index')
+            native_actions << 'index'
+          else
             def index
               @models = self.class.Model.all
               display @models
             end
           end
 
-          unless instance_methods.include?('show')
+          if instance_methods.include?('show')
+            native_actions << 'show'
+          else
             def show
               @model = self.class.Model.first(params[:id])
               raise NotFound unless @model
@@ -47,7 +56,9 @@ module MerbAutoScaffold
             end
           end
 
-          unless instance_methods.include?('new')
+          if instance_methods.include?('new')
+            native_actions << 'new'
+          else
             def new
               only_provides :html
               @model = self.class.Model.new
@@ -55,7 +66,9 @@ module MerbAutoScaffold
             end
           end
 
-          unless instance_methods.include?('edit')
+          if instance_methods.include?('edit')
+            native_actions << 'edit'
+          else
             def edit
               only_provides :html
               @model = self.class.Model.first(params[:id])
@@ -65,7 +78,9 @@ module MerbAutoScaffold
           end
 
 
-          unless instance_methods.include?('create')
+          if instance_methods.include?('create')
+            native_actions << 'create'
+          else
             def create
               @model = self.class.Model.new(params[:model])
               if @model.save
@@ -76,7 +91,9 @@ module MerbAutoScaffold
             end
           end
 
-          unless instance_methods.include?('update')
+          if instance_methods.include?('update')
+            native_actions << 'update'
+          else
             def update
               @model = self.class.Model.first(params[:id])
               raise NotFound unless @model
@@ -88,7 +105,9 @@ module MerbAutoScaffold
             end
           end
 
-          unless instance_methods.include?('destroy')
+          if instance_methods.include?('destroy')
+            native_actions << 'destroy'
+          else
             def destroy
               @model = self.class.Model.first(params[:id])
               raise NotFound unless @model
@@ -101,13 +120,19 @@ module MerbAutoScaffold
           end
 
           private
-
+          
+          alias :_orig_template_location :_template_location
+          
           def _template_location(action, type = nil, controller = controller_name)
-            undo   = Merb.dir_for(:view).gsub(%r{[^/]+}, '..')
-            prefix = File.dirname(__FILE__)
-            folder = 'views'
-            file   = controller == "layout" ? "layout.#{type}" : "#{action}.#{type}"
-            File.join( '.', undo, prefix, folder, file )
+            if self.class.native_actions.include?( action_name )
+              _orig_template_location( action, type, controller_name )
+            else
+              undo   = Merb.dir_for(:view).gsub(%r{[^/]+}, '..')
+              prefix = File.dirname(__FILE__)
+              folder = 'views'
+              file   = controller == "layout" ? "layout.#{type}" : "#{action}.#{type}"
+              File.join( '.', undo, prefix, folder, file )
+            end
           end
         }
       end
