@@ -125,7 +125,7 @@ module MerbAutoScaffold
           
           def _template_location(action, type = nil, controller = controller_name)
             if self.class.native_actions.include?( action_name )
-              _orig_template_location( action, type, controller_name )
+              _orig_template_location( action, type, controller )
             else
               undo   = Merb.dir_for(:view).gsub(%r{[^/]+}, '..')
               prefix = File.dirname(__FILE__)
