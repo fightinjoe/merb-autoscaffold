@@ -1,15 +1,50 @@
+<%
+  table        = database.schema[ self.class.Model ]
+  columns      = table.columns
+  associations = table.associations
+  #has_manys    = associations.select { |a|
+  #                 a.is_a?(DataMapper::Associations::HasManyAssociation)
+  #               }.collect(&:association_name)
+  belongs_tos  = associations.select { |a|
+                   a.is_a?(DataMapper::Associations::BelongsToAssociation)
+                 }
+  foreign_keys = belongs_tos.collect(&:foreign_key_name)
+%>
+
 <dl>
-  <% database.table( self.class.Model ).columns.each do |column| %>
+  <% columns.each do |column| %>
+
+    <% next if foreign_keys.include?( column.name ) %>
+
     <dt><%= column.name %></dt>
     <dd>
-      <% case column.type %>
-      <% when :string, :integer %>
-        <input type="text" name="model[<%= column.name %>]" value="<%= model.send( column.name ) %>" />
-      <% when :text %>
-        <textarea name="model[<%= column.name %>]"><%= model.send( column.name ) %></textarea>
+
+      <% if column.options[:serial] %>
+        <%= model.send( column.name ) %>
+
       <% else %>
-        <%= "Couldn't find #{ column.type }" %>
+        <% case column.type %>
+        <% when :string, :integer %>
+          <input type="text" name="model[<%= column.name %>]" value="<%= model.send( column.name ) %>" />
+        <% when :text %>
+          <textarea name="model[<%= column.name %>]"><%= model.send( column.name ) %></textarea>
+        <% when :datetime %>
+          <input type="text" name="model[<%= column.name %>]" value="<%= model.send( column.name ) %>" />
+        <% else %>
+          <%= "Don't know how to edit #{ column.type }" %>
+        <% end %>
       <% end %>
     </dd>
+  <% end %>
+
+  <% for bt in belongs_tos %>
+    <dt><%= bt.name %></dt>
+    <dd>
+      <%= partial( 'belongs_to', :association => bt, :model => model ) %>
+    </dd>
+  <% end %>
+
+  <% if action_name != 'new' %>
+
   <% end %>
 </dl>
