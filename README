@@ -1,0 +1,47 @@
+merb_autoscaffold
+=================
+
+Merb AutoScaffold is a Merb plugin that provides scaffolding for free
+for all models.
+
+==== Usage:
+
+Just add a dependency in your init.rb file:
+
+dependency 'merb_autoscaffold'
+
+Scaffolds will then be available for all models in your application.  If a controller
+for a model already exists, then any actions in that controller will be preserved,
+while the missing CRUD actions will be added
+
+==== Example:
+
+# /app/models/blog.rb
+
+class Blog < DataMapper::Base
+  property :title,   :string
+  property :content, :text
+
+  has_many :comments
+end
+
+# /config/init.rb
+
+...
+dependency 'merb_autoscaffold'
+...
+
+# Run the Merb server
+
+$ merb
+
+# Scaffolds are now available at http://localhost:4000/blogs from your web browser
+
+==== Caveats
+
+Currently, autoscaffolds only work with DataMapper models.
+
+Also, if you wish to layer this scaffolding on top of controllers that already exist,
+the controller name must correspond to the plural of the model name and inherit
+from application.rb.  (e.g. for a Blog model, AutoScaffold will extend the
+Blogs < Application controller)

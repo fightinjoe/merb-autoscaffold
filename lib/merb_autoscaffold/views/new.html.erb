@@ -1,0 +1,5 @@
+<form action="<%= url( self.class.Model.plural_name ) %>" method="POST">
+  <%= partial( 'form', :model => @model ) %>
+  <input type="submit" value="Save" />
+  <a href="<%= url( self.class.Model.plural_name ) %>">Cancel</a>
+</form>

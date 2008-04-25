@@ -1,0 +1,11 @@
+<a href="<%= url("new_#{ self.class.Model.to_s.snake_case }") %>">New</a>
+
+<ul>
+  <% for model in @models -%>
+    <li>
+      <a href="<%= url( model.class.singular_name, model ) %>">
+        <%= model.try(:name) || model.try(:title) || "#{ model.class.to_s } ##{ model.id }" %>
+      </a>
+    </li>
+  <% end %>
+</ul>

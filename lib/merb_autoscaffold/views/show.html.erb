@@ -1,0 +1,19 @@
+<ul class="unlist horizontal">
+  <li><a href="<%= url( self.class.Model.plural_name ) %>">View all</a></li>
+  <li><a href="<%= url("edit_#{ self.class.Model.singular_name }", @model) %>">Edit</a></li>
+  <li>
+    <form action="<%= url( self.class.Model.singular_name, @model ) %>" method="POST">
+      <input type="hidden" name="_method" value="DELETE" />
+      <input type="submit" value="Delete" />
+    </form>
+  </li>
+</ul>
+
+<dl>
+  <% database.table( self.class.Model ).columns.each do |column| %>
+    <dt><%= column.name %></dt>
+    <dd>
+      <%= @model.send( column.name ) %>
+    </dd>
+  <% end %>
+</dl>

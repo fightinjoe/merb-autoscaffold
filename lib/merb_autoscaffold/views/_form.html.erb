@@ -1,0 +1,15 @@
+<dl>
+  <% database.table( self.class.Model ).columns.each do |column| %>
+    <dt><%= column.name %></dt>
+    <dd>
+      <% case column.type %>
+      <% when :string, :integer %>
+        <input type="text" name="model[<%= column.name %>]" value="<%= model.send( column.name ) %>" />
+      <% when :text %>
+        <textarea name="model[<%= column.name %>]"><%= model.send( column.name ) %></textarea>
+      <% else %>
+        <%= "Couldn't find #{ column.type }" %>
+      <% end %>
+    </dd>
+  <% end %>
+</dl>
