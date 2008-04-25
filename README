@@ -6,7 +6,11 @@ for all models.
 
 ==== Usage:
 
-Just add a dependency in your init.rb file:
+You must first build and install the gem.  From the merb_autoscaffold directory, run:
+
+$ sudo rake gem install
+
+Then add a dependency in your init.rb file:
 
 dependency 'merb_autoscaffold'
 
