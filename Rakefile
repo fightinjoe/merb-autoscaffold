@@ -24,6 +24,7 @@ spec = Gem::Specification.new do |s|
   s.autorequire      = PLUGIN
   s.files            = %w(LICENSE README Rakefile TODO) + Dir.glob("{lib,specs}/**/*")
   s.add_dependency('merb', '>= 0.9.2')
+  s.add_dependency('paginator', '>= 1.1.0')
 end
 
 Rake::GemPackageTask.new(spec) do |pkg|

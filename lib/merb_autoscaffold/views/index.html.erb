@@ -2,12 +2,12 @@
 
 <div id="content">
   <h2>
-    All <%= self.class.Model.plural_name %>
+    All <%= @models.count %> <%= self.class.Model.plural_name %>
     <a href="<%= url("new_scaffold_#{ self.class.Model.singular_name }") %>">New</a></li>
   </h2>
 
-  <ol>
-    <% for model in @models -%>
+  <ol start="<%= 1 + 20 * ((params[:page] || '1').to_i - 1) %>">
+    <% for model in @models.page(params[:page]) -%>
       <li>
         <a href="<%= url( "scaffold_#{model.class.singular_name}", model ) %>">
           <%= model.try(:name) || model.try(:title) || "#{ model.class.to_s } ##{ model.id }" %>
@@ -15,4 +15,13 @@
       </li>
     <% end %>
   </ol>
+
+  <ul class="horizontal unlist">
+    <li>Page:</li>
+    <% for page in @models %>
+      <li>
+        <a href="?page=<%= page.number %>"><%= page.number %></a>
+      </li>
+    <% end %>
+  </ul>
 </div>

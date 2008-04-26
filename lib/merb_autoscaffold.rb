@@ -6,6 +6,8 @@ if defined?(Merb::Plugins)
     Merb::Plugins.config[:merb_autoscaffold] = {}
   end
 
+  dependency "paginator"
+
   Merb::BootLoader.after_app_loads do
     Merb::Plugins.config[:merb_autoscaffold][:namespace] ||= 'scaffolds'
 

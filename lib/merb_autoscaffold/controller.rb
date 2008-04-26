@@ -48,7 +48,9 @@ module MerbAutoScaffold
             native_actions << 'index'
           else
             def index
-              @models = self.class.Model.all
+              @models = Paginator.new( self.class.Model.count, 20) do |offset, per_page|
+                self.class.Model.all(:limit => per_page, :offset => offset)
+              end
               display @models
             end
           end
