@@ -1,17 +1,3 @@
-<%
-  table        = database.schema[ self.class.Model ]
-  columns      = table.columns
-  associations = table.associations
-  #has_manys    = associations.select { |a|
-  #                 a.is_a?(DataMapper::Associations::HasManyAssociation)
-  #               }.collect(&:association_name)
-  belongs_tos  = associations.select { |a|
-                   a.is_a?(DataMapper::Associations::BelongsToAssociation)
-                 }
-  #foreign_keys = belongs_tos.collect(&:foreign_key_name)
-  assoc_hash   = Hash[*belongs_tos.collect {|a| [a.foreign_key_name, a]}.flatten]
-%>
-
 <h1>
   <%= scaf_title( @model )  %>
 </h1>
@@ -28,17 +14,19 @@
 </ul>
 
 <dl>
-  <% table.columns.each do |column| %>
+  <% scaf_table.columns.each do |column| %>
     <dt><%= column.name %></dt>
     <dd>
-      <% if association = assoc_hash[column.name] %>
+      <% if association = scaf_assoc_hash[column.name] %>
         <% obj = association.constant.get( @model.send( column.name ) ) %>
-        <a href="<%= url( association.constant.singular_name, obj ) %>">
-          <%= scaf_title( obj ) %>
-        </a>
+        <%= scaf_link( obj ) %>
       <% else %>
         <%= @model.send( column.name ) %>
       <% end %>
     </dd>
+  <% end %>
+
+  <% for association in scaf_has_manys %>
+    <%= partial( :has_many_show, :model => @model, :association => association ) %>
   <% end %>
 </dl>

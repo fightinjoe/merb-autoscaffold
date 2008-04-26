@@ -1,20 +1,7 @@
-<%
-  table        = database.schema[ self.class.Model ]
-  columns      = table.columns
-  associations = table.associations
-  #has_manys    = associations.select { |a|
-  #                 a.is_a?(DataMapper::Associations::HasManyAssociation)
-  #               }.collect(&:association_name)
-  belongs_tos  = associations.select { |a|
-                   a.is_a?(DataMapper::Associations::BelongsToAssociation)
-                 }
-  foreign_keys = belongs_tos.collect(&:foreign_key_name)
-%>
-
 <dl>
-  <% columns.each do |column| %>
+  <% scaf_columns.each do |column| %>
 
-    <% next if foreign_keys.include?( column.name ) %>
+    <% next if scaf_foreign_keys.include?( column.name ) %>
 
     <dt><%= column.name %></dt>
     <dd>
@@ -37,7 +24,7 @@
     </dd>
   <% end %>
 
-  <% for bt in belongs_tos %>
+  <% for bt in scaf_belongs_tos %>
     <dt><%= bt.name %></dt>
     <dd>
       <%= partial( 'belongs_to', :association => bt, :model => model ) %>
@@ -45,6 +32,5 @@
   <% end %>
 
   <% if action_name != 'new' %>
-
   <% end %>
 </dl>
