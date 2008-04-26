@@ -3,12 +3,12 @@
 <div id="content">
   <h2>
     Create a new <%= self.class.Model.singular_name %>
-    <a href="<%= url( self.class.Model.plural_name ) %>">Cancel</a>
+    <a href="<%= url( "scaffold_#{self.class.Model.plural_name}" ) %>">Cancel</a>
   </h2>
 
-  <form action="<%= url( self.class.Model.plural_name ) %>" method="POST">
+  <form action="<%= url( "scaffold_#{self.class.Model.plural_name}" ) %>" method="POST">
     <%= partial( 'form', :model => @model ) %>
     <input type="submit" value="Save" />
-    <a href="<%= url( self.class.Model.plural_name ) %>">Cancel</a>
+    <a href="<%= url( "scaffold_#{self.class.Model.plural_name}" ) %>">Cancel</a>
   </form>
 </div>

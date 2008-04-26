@@ -11,7 +11,7 @@
         <h1>
           AutoScaffold
           <% for m in ::MerbAutoScaffold::Models.all %>
-            <a href="<%= url( m.plural_name ) %>">
+            <a href="<%= url( "scaffold_#{m.plural_name}" ) %>">
               <%= m.plural_name.to_s.capitalize %>
             </a>
           <% end %>

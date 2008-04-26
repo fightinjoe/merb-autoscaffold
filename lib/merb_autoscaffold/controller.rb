@@ -7,7 +7,7 @@ module MerbAutoScaffold
     def initialize( model )
       # Create the class
       controller_name = model.to_s.pluralize
-      controller = eval("class ::#{ controller_name } < Application; end; #{ controller_name }")
+      controller = eval("class ::Scaffold; class #{ controller_name } < Application; end; end; ::Scaffold::#{ controller_name }")
 
       # Add the instance methods
       controller.meta_def( 'Model' ) { model }

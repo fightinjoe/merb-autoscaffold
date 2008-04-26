@@ -3,9 +3,9 @@
 <div id="content">
   <h2>
     <%= catch_content( :for_title ) %>
-    <a href="<%= url( self.class.Model.plural_name ) %>">View all</a>
-    <a href="<%= url("edit_#{ self.class.Model.singular_name }", @model) %>">Edit</a>
-    <form action="<%= url( self.class.Model.singular_name, @model ) %>" method="POST">
+    <a href="<%= url( "scaffold_#{self.class.Model.plural_name}" ) %>">View all</a>
+    <a href="<%= url("edit_scaffold_#{ self.class.Model.singular_name }", @model) %>">Edit</a>
+    <form action="<%= url( "scaffold_#{self.class.Model.singular_name}", @model ) %>" method="POST">
       <input type="hidden" name="_method" value="DELETE" />
       <input type="submit" value="Delete" />
     </form>

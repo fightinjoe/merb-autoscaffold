@@ -3,13 +3,13 @@
 <div id="content">
   <h2>
     All <%= self.class.Model.plural_name %>
-    <a href="<%= url("new_#{ self.class.Model.singular_name }") %>">New</a></li>
+    <a href="<%= url("new_scaffold_#{ self.class.Model.singular_name }") %>">New</a></li>
   </h2>
 
   <ol>
     <% for model in @models -%>
       <li>
-        <a href="<%= url( model.class.singular_name, model ) %>">
+        <a href="<%= url( "scaffold_#{model.class.singular_name}", model ) %>">
           <%= model.try(:name) || model.try(:title) || "#{ model.class.to_s } ##{ model.id }" %>
         </a>
       </li>

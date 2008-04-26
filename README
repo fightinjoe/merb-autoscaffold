@@ -39,7 +39,15 @@ dependency 'merb_autoscaffold'
 
 $ merb
 
-# Scaffolds are now available at http://localhost:4000/blogs from your web browser
+# Scaffolds are now available at http://localhost:4000/scaffolds from your web browser
+
+# You can customize the path to the scaffolds by editing the AutoScaffold's configs
+# in the /config/init.rb file in the +after_app_loads+ block:
+
+Merb::BootLoader.after_app_loads do
+  # scaffolds will be available at /foo instead of /scaffolds
+  Merb::Plugins.config[:merb_autoscaffold][:namespace] = 'foo'
+end
 
 ==== Caveats
 
