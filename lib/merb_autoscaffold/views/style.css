@@ -66,6 +66,7 @@ ul.horizontal li {
   -webkit-border-radius: 0.5em;
   margin: 20px 10px;
   padding: 1em;
+  overflow:auto;
 }
 
 #content h2 {
@@ -85,7 +86,8 @@ ul.horizontal li {
 
 dl dt {
   float:left;
-  width: 150px;
+  width: 175px;
+  overflow:hidden;
   clear:left;
   font-size: 1.25em;
   color: #7AAD00;
@@ -94,7 +96,7 @@ dl dt {
 
 dl dd {
   padding-left: 1em;
-  margin: 0 0 .5em 150px;
+  margin: 0 0 .5em 175px;
   line-height:1.5em;
 }
 

@@ -6,7 +6,7 @@ module Merb
 
     def scaf_link( obj )
       <<-EOS
-      <a href="#{ url( obj.class.singular_name, obj ) }">
+      <a href="#{ url( "scaffold_#{obj.class.singular_name}", obj ) }">
         #{ scaf_title( obj ) }
       </a>
       EOS

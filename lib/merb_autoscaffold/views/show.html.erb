@@ -18,7 +18,7 @@
       <dd>
         <% if association = scaf_assoc_hash[column.name] %>
           <% obj = association.constant.get( @model.send( column.name ) ) %>
-          <%= scaf_link( obj ) %>
+          <%= scaf_link( obj ) unless obj.blank?   %>
         <% else %>
           <%= @model.send( column.name ) %>
         <% end %>
