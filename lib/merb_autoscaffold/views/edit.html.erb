@@ -1,10 +1,15 @@
-<h1>
-  Edit: <%= scaf_title( @model ) %>
-</h1>
+<% throw_content( :for_title, "Edit #{ self.class.Model.to_s }") %>
 
-<form action="<%= url( self.class.Model.singular_name, @model ) %>" method="POST">
-  <input type="hidden" name="_method" value="PUT" />
-  <%= partial( 'form', :model => @model ) %>
-  <input type="submit" value="Update" />
-  <a href="<%= url( self.class.Model.singular_name, @model ) %>">Cancel</a>
-</form>
+<div id="content">
+  <h2>
+    Edit: <%= scaf_title( @model ) %>
+    <a href="<%= url( self.class.Model.singular_name, @model ) %>">Cancel</a>
+  </h2>
+
+  <form action="<%= url( self.class.Model.singular_name, @model ) %>" method="POST">
+    <input type="hidden" name="_method" value="PUT" />
+    <%= partial( 'form', :model => @model ) %>
+    <input type="submit" value="Update" />
+    <a href="<%= url( self.class.Model.singular_name, @model ) %>">Cancel</a>
+  </form>
+</div>

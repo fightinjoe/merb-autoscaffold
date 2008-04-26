@@ -1,9 +1,14 @@
-<h1>
-  New <%= self.class.Model.singular_name %>
-</h1>
+<% throw_content( :for_title, "New #{ self.class.Model.to_s }") %>
 
-<form action="<%= url( self.class.Model.plural_name ) %>" method="POST">
-  <%= partial( 'form', :model => @model ) %>
-  <input type="submit" value="Save" />
-  <a href="<%= url( self.class.Model.plural_name ) %>">Cancel</a>
-</form>
+<div id="content">
+  <h2>
+    Create a new <%= self.class.Model.singular_name %>
+    <a href="<%= url( self.class.Model.plural_name ) %>">Cancel</a>
+  </h2>
+
+  <form action="<%= url( self.class.Model.plural_name ) %>" method="POST">
+    <%= partial( 'form', :model => @model ) %>
+    <input type="submit" value="Save" />
+    <a href="<%= url( self.class.Model.plural_name ) %>">Cancel</a>
+  </form>
+</div>

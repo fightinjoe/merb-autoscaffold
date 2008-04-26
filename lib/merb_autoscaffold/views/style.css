@@ -1,0 +1,109 @@
+body {
+  font-family: Helvetica, Arial, Verdana, san-serif;
+  font-size: 85%;
+  background: black;
+  margin:0;
+}
+
+a { color: #11B716; }
+a:hover {
+  color: Black;
+  background: #22D716;
+}
+
+ul.unlist {
+  list-style: none;
+  margin:0;
+  padding:0;
+}
+
+ul.horizontal {
+  overflow:auto;
+}
+
+ul.horizontal li {
+  float:left;
+  padding-right: .5em;  
+}
+
+#header {
+  background:#36A900;
+  padding:.5em 0 .25em 1em;
+  border-top: 2px solid #C3F500;
+  border-bottom: 4px solid #35D726;
+  margin: 0;
+  overflow:auto;
+  color: white;
+}
+
+#header h1 {
+  float:left;
+  margin:.5em 0 0 0;
+  font-size: 2em;
+}
+
+#header h1 a {
+  color:White;
+  text-decoration:none;
+  font-size:.5em;
+  font-weight:normal;
+  margin-left:1em;
+  padding: .25em;
+}
+
+#header h1 a:hover {
+  background: #267B00;
+}
+
+#header li {
+  line-height:2em;
+  margin-left:2em;
+}
+
+#content {
+  background: White;
+  -moz-border-radius: 0.5em;
+  -webkit-border-radius: 0.5em;
+  margin: 20px 10px;
+  padding: 1em;
+}
+
+#content h2 {
+  margin:.25em 0;
+  border-bottom: 2px solid Silver;
+  font-size:2em;
+}
+
+#content h2 a {
+  font-size: .5em;
+  margin-left:1em;
+}
+
+#content h2 form {
+  display:inline;
+}
+
+dl dt {
+  float:left;
+  width: 150px;
+  clear:left;
+  font-size: 1.25em;
+  color: #7AAD00;
+  text-align:right;
+}
+
+dl dd {
+  padding-left: 1em;
+  margin: 0 0 .5em 150px;
+  line-height:1.5em;
+}
+
+dl dd textarea {
+  height: 10em;
+  width: 300px;
+}
+
+dl dd input {
+  width: 300px;
+}
+

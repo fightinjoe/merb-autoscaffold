@@ -1,15 +1,18 @@
-<h1>
-  All <%= self.class.Model.plural_name %>
-</h1>
+<% throw_content( :for_title, "All #{ self.class.Model.to_s.pluralize }") %>
 
-<a href="<%= url("new_#{ self.class.Model.singular_name }") %>">New</a>
+<div id="content">
+  <h2>
+    All <%= self.class.Model.plural_name %>
+    <a href="<%= url("new_#{ self.class.Model.singular_name }") %>">New</a></li>
+  </h2>
 
-<ul>
-  <% for model in @models -%>
-    <li>
-      <a href="<%= url( model.class.singular_name, model ) %>">
-        <%= model.try(:name) || model.try(:title) || "#{ model.class.to_s } ##{ model.id }" %>
-      </a>
-    </li>
-  <% end %>
-</ul>
+  <ol>
+    <% for model in @models -%>
+      <li>
+        <a href="<%= url( model.class.singular_name, model ) %>">
+          <%= model.try(:name) || model.try(:title) || "#{ model.class.to_s } ##{ model.id }" %>
+        </a>
+      </li>
+    <% end %>
+  </ol>
+</div>

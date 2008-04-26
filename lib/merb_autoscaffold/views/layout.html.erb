@@ -1,29 +1,24 @@
 <html>
   <head>
-    <title>Merb AutoScaffolding</title>
+    <title>AutoScaffolds: <%= catch_content( :for_title ) %></title>
     <style type="text/css" media="screen">
-body {
-  font-family: Helvetica, Arial, Verdana, san-serif;
-  font-size: 85%;
-}
-
-ul.unlist {
-  list-style: none;
-  margin:0;
-  padding:0;
-}
-
-ul.horizontal {
-  overflow:auto;
-}
-
-ul.horizontal li {
-  float:left;
-  padding-right: .5em;  
-}
+    <%= IO.read(File.join(File.dirname(__FILE__), 'style.css')) %>
     </style>
   </head>
   <body>
-    <%= catch_content :for_layout %>
+    <div class="wrapper">
+      <div id="header">
+        <h1>
+          AutoScaffold
+          <% for m in ::MerbAutoScaffold::Models.all %>
+            <a href="<%= url( m.plural_name ) %>">
+              <%= m.plural_name.to_s.capitalize %>
+            </a>
+          <% end %>
+        </h1>
+      </div>
+
+      <%= catch_content :for_layout %>
+    </div>
   </body>
 </html>

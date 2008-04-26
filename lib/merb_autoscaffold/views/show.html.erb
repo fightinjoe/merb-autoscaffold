@@ -1,32 +1,32 @@
-<h1>
-  <%= scaf_title( @model )  %>
-</h1>
+<% throw_content( :for_title, "#{ [ "#{self.class.Model} ##{@model.id}", scaf_title(@model) ].uniq.join(': ') }") %>
 
-<ul class="unlist horizontal">
-  <li><a href="<%= url("edit_#{ self.class.Model.singular_name }", @model) %>">Edit</a></li>
-  <li>
+<div id="content">
+  <h2>
+    <%= catch_content( :for_title ) %>
+    <a href="<%= url( self.class.Model.plural_name ) %>">View all</a>
+    <a href="<%= url("edit_#{ self.class.Model.singular_name }", @model) %>">Edit</a>
     <form action="<%= url( self.class.Model.singular_name, @model ) %>" method="POST">
       <input type="hidden" name="_method" value="DELETE" />
       <input type="submit" value="Delete" />
     </form>
-  </li>
-  <li><a href="<%= url( self.class.Model.plural_name ) %>">View all</a></li>
-</ul>
+    </ul>
+  </h2>
 
-<dl>
-  <% scaf_table.columns.each do |column| %>
-    <dt><%= column.name %></dt>
-    <dd>
-      <% if association = scaf_assoc_hash[column.name] %>
-        <% obj = association.constant.get( @model.send( column.name ) ) %>
-        <%= scaf_link( obj ) %>
-      <% else %>
-        <%= @model.send( column.name ) %>
-      <% end %>
-    </dd>
-  <% end %>
+  <dl>
+    <% scaf_table.columns.each do |column| %>
+      <dt><%= column.name %></dt>
+      <dd>
+        <% if association = scaf_assoc_hash[column.name] %>
+          <% obj = association.constant.get( @model.send( column.name ) ) %>
+          <%= scaf_link( obj ) %>
+        <% else %>
+          <%= @model.send( column.name ) %>
+        <% end %>
+      </dd>
+    <% end %>
 
-  <% for association in scaf_has_manys %>
-    <%= partial( :has_many_show, :model => @model, :association => association ) %>
-  <% end %>
-</dl>
+    <% for association in scaf_has_manys %>
+      <%= partial( :has_many_show, :model => @model, :association => association ) %>
+    <% end %>
+  </dl>
+</div>

@@ -11,11 +11,11 @@
 
 <dt><%= association.name.to_s.capitalize %></dt>
 <dd>
-  <ul>
+  <ol>
     <% for obj in model.send( association.name ) %>
       <li>
         <%= scaf_link(obj) %>
       </li>
     <% end %>
-  </ul>
+  </ol>
 </dd>
