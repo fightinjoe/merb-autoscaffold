@@ -24,6 +24,9 @@ module MerbAutoScaffold
       # class << controller
       #   include TestIndex
       # end
+      #
+      # Possibly need to use Merb::Controller#show_action() to register
+      # the actions
     end
 
     # module TestIndex
