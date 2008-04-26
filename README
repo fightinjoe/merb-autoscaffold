@@ -52,8 +52,3 @@ end
 ==== Caveats
 
 Currently, autoscaffolds only work with DataMapper models.
-
-Also, if you wish to layer this scaffolding on top of controllers that already exist,
-the controller name must correspond to the plural of the model name and inherit
-from application.rb.  (e.g. for a Blog model, AutoScaffold will extend the
-Blogs < Application controller)
