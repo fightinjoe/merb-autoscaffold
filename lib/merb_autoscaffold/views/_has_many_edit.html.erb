@@ -1,0 +1,21 @@
+<%
+  # Partial for editing the items in a has_many relationship
+  #
+  # ==== Parameters
+  #
+  # model<DataMapper::Base>: the model to which the relationship belongs
+  # 
+  # association<DataMapper::Associations::HasManyAssociation>: the association that forms the
+  #   basis for the relationship
+%>
+
+<dt><%= association.name.to_s.capitalize %></dt>
+<dd>
+  <select name="model[<%= association.name %>][]" multiple="multiple">
+    <% for obj in association.constant.all %>
+      <option value="<%= obj.id %>"<%= ' selected="selected"' if model.send( association.name ).include?( obj ) %>>
+        <%= scaf_title( obj ) %>
+      </option>
+    <% end %>
+  </select>
+</dd>

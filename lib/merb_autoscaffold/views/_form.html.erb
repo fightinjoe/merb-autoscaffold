@@ -31,6 +31,7 @@
     </dd>
   <% end %>
 
-  <% if action_name != 'new' %>
+  <% for hm in scaf_has_manys %>
+    <%= partial( 'has_many_edit', :model => model, :association => hm ) %>
   <% end %>
 </dl>
