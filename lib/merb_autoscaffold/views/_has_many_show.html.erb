@@ -1,0 +1,19 @@
+<%
+  # Partial for displaying the items in a has_many relationship
+  #
+  # ==== Parameters
+  # model<DataMapper::Base>: the model to which the relationship belongs
+  # association<DataMapper::Associations::HasManyAssociation>: the association that forms the
+  #   basis for the relationship
+%>
+
+<dt><%= association.name.to_s.capitalize %></dt>
+<dd>
+  <ul>
+    <% for obj in model.send( association.name ) %>
+      <li>
+        <%= scaf_link(obj) %>
+      </li>
+    <% end %>
+  </ul>
+</dd>
