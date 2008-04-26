@@ -12,7 +12,7 @@
 <dt><%= association.name.to_s.capitalize %></dt>
 <dd>
   <select name="model[<%= association.name %>][]" multiple="multiple">
-    <% for obj in association.associated_constant.all %>
+    <% for obj in association.associated_table.klass.all %>
       <option value="<%= obj.id %>"<%= ' selected="selected"' if model.send( association.name ).include?( obj ) %>>
         <%= scaf_title( obj ) %>
       </option>

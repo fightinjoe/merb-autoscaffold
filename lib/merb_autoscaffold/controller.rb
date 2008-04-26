@@ -91,7 +91,7 @@ module MerbAutoScaffold
             def create
               @model = self.class.Model.new(params[:model])
               if @model.save
-                redirect url(self.class.Model.singular_name, @model)
+                redirect url( "scaffold_#{self.class.Model.singular_name}", @model)
               else
                 render :new
               end
@@ -111,7 +111,7 @@ module MerbAutoScaffold
 
               if @model.update_attributes(params[:model])
                 associations.each { |a, ids| update_has_many_association( a, @model, ids ) }
-                redirect url(self.class.Model.singular_name, @model)
+                redirect url( "scaffold_#{self.class.Model.singular_name}", @model)
               else
                 raise BadRequest
               end
@@ -125,7 +125,7 @@ module MerbAutoScaffold
               @model = self.class.Model.first(params[:id])
               raise NotFound unless @model
               if @model.destroy!
-                redirect url(self.class.Model.plural_name)
+                redirect url( "scaffold_#{self.class.Model.plural_name}" )
               else
                 raise BadRequest
               end
@@ -149,13 +149,15 @@ module MerbAutoScaffold
           end
 
           def update_has_many_association( assoc, model, ids )
-            model.send( assoc.name ).each { |obj|
-             obj.update_attributes( assoc.foreign_key_name => nil )
-            }
-            for id in ids
-              assoc.associated_constant.get( id ).
-                update_attributes( assoc.foreign_key_name => model.id )
+            rel = model.send( assoc.name )
+            # remove all of the associated items
+            rel.nullify_association
+
+            # add all of the objects to the relationship
+            for obj in assoc.associated_table.klass.all( :id.in => ids )
+              rel << obj
             end
+            model.save
           end
         }
       end

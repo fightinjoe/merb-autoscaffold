@@ -18,7 +18,8 @@ module Merb
 
     def scaf_has_manys
       scaf_assocs.select { |a|
-        a.is_a?(DataMapper::Associations::HasManyAssociation)
+        a.is_a?(DataMapper::Associations::HasManyAssociation) ||
+          a.is_a?(DataMapper::Associations::HasAndBelongsToManyAssociation)
       }
     end
 

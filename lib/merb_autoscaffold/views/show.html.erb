@@ -20,7 +20,7 @@
           <% obj = association.constant.get( @model.send( column.name ) ) %>
           <%= scaf_link( obj ) unless obj.blank?   %>
         <% else %>
-          <%= @model.send( column.name ) %>
+          <%= @model.send( column.name ) || '&nbsp;' %>
         <% end %>
       </dd>
     <% end %>
