@@ -1,4 +1,8 @@
-<a href="<%= url("new_#{ self.class.Model.to_s.snake_case }") %>">New</a>
+<h1>
+  All <%= self.class.Model.plural_name %>
+</h1>
+
+<a href="<%= url("new_#{ self.class.Model.singular_name }") %>">New</a>
 
 <ul>
   <% for model in @models -%>

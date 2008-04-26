@@ -1,4 +1,5 @@
 require 'metaid'
+require 'merb_autoscaffold/view_helpers'
 
 module MerbAutoScaffold
   class Controller
@@ -31,7 +32,10 @@ module MerbAutoScaffold
 
     module InstanceMethods
       def self.included(base)
+
         base.class_eval {
+          include ::Merb::ViewHelpers
+
           class << self
             attr_accessor :native_actions
             def native_actions() @native_actions ||= []; end

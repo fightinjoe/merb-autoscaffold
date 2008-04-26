@@ -12,8 +12,11 @@
   assoc_hash   = Hash[*belongs_tos.collect {|a| [a.foreign_key_name, a]}.flatten]
 %>
 
+<h1>
+  <%= scaf_title( @model )  %>
+</h1>
+
 <ul class="unlist horizontal">
-  <li><a href="<%= url( self.class.Model.plural_name ) %>">View all</a></li>
   <li><a href="<%= url("edit_#{ self.class.Model.singular_name }", @model) %>">Edit</a></li>
   <li>
     <form action="<%= url( self.class.Model.singular_name, @model ) %>" method="POST">
@@ -21,6 +24,7 @@
       <input type="submit" value="Delete" />
     </form>
   </li>
+  <li><a href="<%= url( self.class.Model.plural_name ) %>">View all</a></li>
 </ul>
 
 <dl>
@@ -30,7 +34,7 @@
       <% if association = assoc_hash[column.name] %>
         <% obj = association.constant.get( @model.send( column.name ) ) %>
         <a href="<%= url( association.constant.singular_name, obj ) %>">
-          <%= obj.try(:title) || obj.try(:name) || "#{ obj.class.to_s } ##{ obj.id }" %>
+          <%= scaf_title( obj ) %>
         </a>
       <% else %>
         <%= @model.send( column.name ) %>
