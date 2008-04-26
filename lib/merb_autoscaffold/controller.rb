@@ -104,7 +104,13 @@ module MerbAutoScaffold
             def update
               @model = self.class.Model.first(params[:id])
               raise NotFound unless @model
+
+              associations = scaf_has_manys.collect { |a|
+                [ a, params['model'].delete( a.name ) ]
+              }
+
               if @model.update_attributes(params[:model])
+                associations.each { |a, ids| update_has_many_association( a, @model, ids ) }
                 redirect url(self.class.Model.singular_name, @model)
               else
                 raise BadRequest
@@ -139,6 +145,16 @@ module MerbAutoScaffold
               folder = 'views'
               file   = controller == "layout" ? "layout.#{type}" : "#{action}.#{type}"
               File.join( '.', undo, prefix, folder, file )
+            end
+          end
+
+          def update_has_many_association( assoc, model, ids )
+            model.send( assoc.name ).each { |obj|
+             obj.update_attributes( assoc.foreign_key_name => nil )
+            }
+            for id in ids
+              assoc.associated_constant.get( id ).
+                update_attributes( assoc.foreign_key_name => model.id )
             end
           end
         }

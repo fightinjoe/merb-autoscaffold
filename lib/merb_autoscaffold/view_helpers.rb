@@ -15,6 +15,7 @@ module Merb
     def scaf_table()   database.schema[ self.class.Model ]; end
     def scaf_columns() scaf_table.columns;                       end
     def scaf_assocs()  scaf_table.associations;                  end
+
     def scaf_has_manys
       scaf_assocs.select { |a|
         a.is_a?(DataMapper::Associations::HasManyAssociation)
