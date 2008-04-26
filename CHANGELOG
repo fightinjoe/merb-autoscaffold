@@ -1,3 +1,8 @@
+0.1.2
+ - Support added for habtm relationships
+ - New Merbivore-styled layout
+ - Optional namespace for routes
+
 0.1.1
  - added support for belongs_to and has_many relationships
  - added support for datetime fields

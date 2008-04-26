@@ -3,7 +3,7 @@ require 'rake/gempackagetask'
 
 PLUGIN   = "merb_autoscaffold"
 NAME     = "merb_autoscaffold"
-VERSION  = "0.1.1"
+VERSION  = "0.1.2"
 AUTHOR   = "Aaron Wheeler"
 EMAIL    = "aaron@fightinjoe.com"
 HOMEPAGE = "http://merb-plugins.rubyforge.org/merb_autoscaffold/"
