@@ -1,2 +1,8 @@
+0.1.1
+ - added support for belongs_to and has_many relationships
+ - added support for datetime fields
+ - removed the ability to edit primary keys
+ - associations display as links to the related objects
+
 0.1.0
  - initial release
