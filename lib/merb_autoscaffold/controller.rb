@@ -91,8 +91,13 @@ module MerbAutoScaffold
             native_actions << 'create'
           else
             def create
+              associations = scaf_has_manys.collect { |a|
+                [ a, params['model'].delete( a.name ) ]
+              }
+
               @model = self.class.Model.new(params[:model])
               if @model.save
+                associations.each { |a, ids| update_has_many_association( a, @model, ids ) }
                 redirect url( "scaffold_#{self.class.Model.singular_name}", @model)
               else
                 render :new
