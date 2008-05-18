@@ -15,7 +15,7 @@
           <input type="text" name="model[<%= column.name %>]" value="<%= model.send( column.name ) %>" />
         <% when :text %>
           <textarea name="model[<%= column.name %>]"><%= model.send( column.name ) %></textarea>
-        <% when :datetime %>
+        <% when :datetime, :date %>
           <input type="text" name="model[<%= column.name %>]" value="<%= model.send( column.name ) %>" />
         <% else %>
           <%= "Don't know how to edit #{ column.type }" %>
