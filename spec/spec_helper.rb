@@ -14,6 +14,10 @@ require 'ruby-debug'
 DataMapper::Persistence.auto_migrate!
 DataMapper::Database.setup({:adapter => "sqlite3", :database => "test.db"})
 
+Merb::BootLoader.before_app_loads do
+  require 'merb_autoscaffold'
+end
+
 Merb.start_environment(
   :testing       => true,
   :adapter       => 'runner',
