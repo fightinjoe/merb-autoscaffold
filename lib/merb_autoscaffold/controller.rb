@@ -7,7 +7,14 @@ module MerbAutoScaffold
     def initialize( model )
       # Create the class
       controller_name = model.to_s.pluralize
-      controller = eval("class ::Scaffold; class #{ controller_name } < Application; end; end; ::Scaffold::#{ controller_name }")
+      controller = eval(<<-EOS
+        class ::Scaffold
+          class #{ controller_name } < Application
+          end
+        end
+        ::Scaffold::#{ controller_name }"
+      EOS
+      )
 
       # Add the instance methods
       controller.meta_def( 'Model' ) { model }
@@ -95,6 +102,8 @@ module MerbAutoScaffold
                 [ a, params['model'].delete( a.name ) ]
               }
 
+              params[:model].each { |k,v| params[:model][k] = nil if v.blank? }
+
               @model = self.class.Model.new(params[:model])
               if @model.save
                 associations.each { |a, ids| update_has_many_association( a, @model, ids ) }
@@ -109,6 +118,8 @@ module MerbAutoScaffold
             native_actions << 'update'
           else
             def update
+              params[:model].each { |k,v| params[:model][k] = nil if v.blank? }
+
               @model = self.class.Model.first(params[:id])
               raise NotFound unless @model
 

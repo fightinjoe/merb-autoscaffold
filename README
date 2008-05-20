@@ -51,4 +51,6 @@ end
 
 ==== Caveats
 
-Currently, autoscaffolds only work with DataMapper models.
+Currently, autoscaffolds only work with DataMapper 0.3 models.
+
+Autoscaffolds also will not work with flat Merb apps.

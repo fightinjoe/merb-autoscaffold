@@ -13,9 +13,12 @@ if defined?(Merb::Plugins)
 
     Merb::Router.prepend { |r|
       path = Merb::Plugins.config[:merb_autoscaffold][:namespace].to_s
-      r.namespace( :scaffold, :path => path )do |scaffold|
+      r.namespace( :scaffold, :path => path ) do |scaffold|
         MerbAutoScaffold::Models.all.each_with_index do |model, i|
+          # Creates the scaffolding controller for the model
           MerbAutoScaffold::Controller.new( model )
+
+          # Add the path to the root directory of the scaffolds - defaults to the first model's scaffold
           # this does not work, thus the explicit way below
           # scaffold.match("/").to(:controller => model.plural_name.to_s, :action => 'index') if i == 0
           r.match("/" + path).to(:controller => 'scaffold/' + model.plural_name.to_s, :action => 'index') if i == 0
