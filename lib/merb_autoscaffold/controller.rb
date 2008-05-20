@@ -1,5 +1,6 @@
 require 'metaid'
 require 'merb_autoscaffold/view_helpers'
+require 'paginator'
 
 module MerbAutoScaffold
   class Controller

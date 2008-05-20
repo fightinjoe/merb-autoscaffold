@@ -18,6 +18,11 @@ Merb::BootLoader.before_app_loads do
   require 'merb_autoscaffold'
 end
 
+Merb::BootLoader.after_app_loads do
+  Blog.auto_migrate!
+  Comment.auto_migrate!
+end
+
 Merb.start_environment(
   :testing       => true,
   :adapter       => 'runner',
