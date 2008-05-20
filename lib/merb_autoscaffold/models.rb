@@ -1,3 +1,5 @@
+require File.join( File.dirname(__FILE__), 'orms', 'datamapper' )
+
 module MerbAutoScaffold
   class Models
     MODEL_REGEXP = %r{^class ([\w\d_\-:]+) .*$}
@@ -14,6 +16,7 @@ module MerbAutoScaffold
             def self.singular_name() self.to_s.snake_case.to_sym; end
             def self.plural_name()   self.to_s.snake_case.pluralize.to_sym; end
           }
+          model.meta_eval { include MerbAutoScaffold::ORMs::DataMapper }
           @models << model
         end
       }

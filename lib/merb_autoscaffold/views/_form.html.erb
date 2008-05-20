@@ -1,7 +1,7 @@
 <dl>
-  <% scaf_columns.each do |column| %>
+  <% model.class.scaf_columns.each do |column| %>
 
-    <% next if scaf_foreign_keys.include?( column.name ) %>
+    <% next if model.class.scaf_foreign_keys.include?( column.name ) %>
 
     <dt><%= column.name %></dt>
     <dd>
@@ -24,14 +24,14 @@
     </dd>
   <% end %>
 
-  <% for bt in scaf_belongs_tos %>
+  <% for bt in model.class.scaf_belongs_tos %>
     <dt><%= bt.name %></dt>
     <dd>
       <%= partial( 'belongs_to', :association => bt, :model => model ) %>
     </dd>
   <% end %>
 
-  <% for hm in scaf_has_manys %>
+  <% for hm in model.class.scaf_has_manys %>
     <%= partial( 'has_many_edit', :model => model, :association => hm ) %>
   <% end %>
 </dl>
