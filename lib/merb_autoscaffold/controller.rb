@@ -60,7 +60,7 @@ module MerbAutoScaffold
               @models = Paginator.new( self.class.Model.count, 20) do |offset, per_page|
                 self.class.Model.all(:limit => per_page, :offset => offset)
               end
-              display @models
+              render
             end
           end
 
@@ -160,7 +160,7 @@ module MerbAutoScaffold
             if self.class.native_actions.include?( action_name )
               _orig_template_location( action, type, controller )
             else
-              undo   = Merb.dir_for(:view).gsub(%r{[^/]+}, '..')
+              undo   = Pathname(Merb.dir_for(:view)).cleanpath.to_s.gsub(%r([^/]{2,}), '..')
               prefix = File.dirname(__FILE__)
               folder = 'views'
               file   = controller == "layout" ? "layout.#{type}" : "#{action}.#{type}"

@@ -1,4 +1,8 @@
-<% throw_content( :for_title, "All #{ self.class.Model.to_s.pluralize }") %>
+<%
+  throw_content( :for_title, "All #{ self.class.Model.to_s.pluralize }")
+  # The number from which the order list begins counting
+  start = 1 + 20 * ((params[:page] || '1').to_i - 1)
+%>
 
 <div id="content">
   <h2>
@@ -6,7 +10,7 @@
     <a href="<%= url("new_scaffold_#{ self.class.Model.singular_name }") %>">New</a></li>
   </h2>
 
-  <ol start="<%= 1 + 20 * ((params[:page] || '1').to_i - 1) %>">
+  <ol start="<%= start %>" class="models">
     <% for model in @models.page(params[:page]) -%>
       <li>
         <a href="<%= url( "scaffold_#{model.class.singular_name}", model ) %>">
@@ -16,7 +20,7 @@
     <% end %>
   </ol>
 
-  <ul class="horizontal unlist">
+  <ul class="horizontal unlist pages">
     <li>Page:</li>
     <% for page in @models %>
       <li>

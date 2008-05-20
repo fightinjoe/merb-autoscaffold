@@ -1,6 +1,6 @@
 <% throw_content( :for_title, "#{ [ "#{self.class.Model} ##{@model.id}", scaf_title(@model) ].uniq.join(': ') }") %>
 
-<div id="content">
+<div id="content" class="model">
   <h2>
     <%= catch_content( :for_title ) %>
     <a href="<%= url( "scaffold_#{self.class.Model.plural_name}" ) %>">View all</a>
