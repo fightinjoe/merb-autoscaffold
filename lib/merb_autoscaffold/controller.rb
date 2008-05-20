@@ -7,12 +7,13 @@ module MerbAutoScaffold
     def initialize( model )
       # Create the class
       controller_name = model.to_s.pluralize
-      controller = eval(<<-EOS
+      controller = eval(
+      <<-EOS
         class ::Scaffold
           class #{ controller_name } < Application
           end
         end
-        ::Scaffold::#{ controller_name }"
+        ::Scaffold::#{ controller_name }
       EOS
       )
 
