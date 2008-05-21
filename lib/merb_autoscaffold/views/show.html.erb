@@ -13,11 +13,11 @@
   </h2>
 
   <dl>
-    <% @model.class.scaf_table.columns.each do |column| %>
+    <% @model.class.scaf_columns.each do |column| %>
       <dt><%= column.name %></dt>
       <dd>
         <% if association = @model.class.scaf_assoc_hash[column.name] %>
-          <% obj = association.constant.get( @model.send( column.name ) ) %>
+          <% obj = find_first( association.klass, @model.send( column.name ) ) %>
           <%= scaf_link( obj ) unless obj.blank?   %>
         <% else %>
           <%= @model.send( column.name ) || '&nbsp;' %>

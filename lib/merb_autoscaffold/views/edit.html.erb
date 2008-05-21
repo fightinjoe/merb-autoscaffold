@@ -6,7 +6,7 @@
     <a href="<%= url( "scaffold_#{self.class.Model.singular_name}", @model ) %>">Cancel</a>
   </h2>
 
-  <form action="<%= url( "scaffold_#{self.class.Model.singular_name}", @model ) %>" method="POST">
+  <form action="<%= url( "scaffold_#{self.class.Model.singular_name}", @model.id ) %>" method="POST">
     <input type="hidden" name="_method" value="PUT" />
     <%= partial( 'form', :model => @model ) %>
     <input type="submit" value="Update" />

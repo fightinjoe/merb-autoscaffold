@@ -2,7 +2,8 @@ merb_autoscaffold
 =================
 
 Merb AutoScaffold is a Merb plugin that provides scaffolding for free
-for all models.
+for all models.  Merb AutoScaffold currently works with DataMapper 0.3
+and ActiveRecord.
 
 ==== Usage:
 
@@ -51,6 +52,6 @@ end
 
 ==== Caveats
 
-Currently, autoscaffolds only work with DataMapper 0.3 models.
+Currently, autoscaffolds only work with DataMapper 0.3 and ActiveRecord models.
 
 Autoscaffolds also will not work with flat Merb apps.

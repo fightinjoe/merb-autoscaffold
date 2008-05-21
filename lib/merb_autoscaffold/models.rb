@@ -1,4 +1,4 @@
-require File.join( File.dirname(__FILE__), 'orms', 'datamapper' )
+%w(datamapper activerecord).each { |r| require File.join( File.dirname(__FILE__), 'orms', r ) }
 
 module MerbAutoScaffold
   class Models
@@ -16,7 +16,15 @@ module MerbAutoScaffold
             def self.singular_name() self.to_s.snake_case.to_sym; end
             def self.plural_name()   self.to_s.snake_case.pluralize.to_sym; end
           }
-          model.meta_eval { include MerbAutoScaffold::ORMs::DataMapper }
+          extension = case model.new
+            # wanted to use klass.superclass here, but the case statment seems to be checking the
+            # class of klass.superclass instead of an equality check
+            when ActiveRecord::Base then MerbAutoScaffold::ORMs::ActiveRecord
+            when DataMapper::Base   then MerbAutoScaffold::ORMs::DataMapper
+            else raise "Merb AutoScaffold does not currently support the #{ model.class.superclass } ORM"
+          end
+
+          model.meta_eval { include extension }
           @models << model
         end
       }

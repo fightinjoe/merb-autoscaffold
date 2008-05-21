@@ -58,7 +58,7 @@ module MerbAutoScaffold
           else
             def index
               @models = Paginator.new( self.class.Model.count, 20) do |offset, per_page|
-                self.class.Model.all(:limit => per_page, :offset => offset)
+                find_all( self.class.Model, :limit => per_page, :offset => offset )
               end
               render
             end
@@ -68,7 +68,7 @@ module MerbAutoScaffold
             native_actions << 'show'
           else
             def show
-              @model = self.class.Model.first(params[:id])
+              @model = find_first( self.class.Model, params[:id] )
               raise NotFound unless @model
               display @model
             end
@@ -89,7 +89,7 @@ module MerbAutoScaffold
           else
             def edit
               only_provides :html
-              @model = self.class.Model.first(params[:id])
+              @model = find_first( self.class.Model, params[:id] )
               raise NotFound unless @model
               render
             end
@@ -100,7 +100,7 @@ module MerbAutoScaffold
             native_actions << 'create'
           else
             def create
-              associations = scaf_has_manys.collect { |a|
+              associations = self.class.Model.scaf_has_manys.collect { |a|
                 [ a, params['model'].delete( a.name ) ]
               }
 
@@ -122,10 +122,10 @@ module MerbAutoScaffold
             def update
               params[:model].each { |k,v| params[:model][k] = nil if v.blank? }
 
-              @model = self.class.Model.first(params[:id])
+              @model = find_first( self.class.Model, params[:id] )
               raise NotFound unless @model
 
-              associations = scaf_has_manys.collect { |a|
+              associations = self.class.Model.scaf_has_manys.collect { |a|
                 [ a, params['model'].delete( a.name ) ]
               }
 
@@ -142,9 +142,9 @@ module MerbAutoScaffold
             native_actions << 'destroy'
           else
             def destroy
-              @model = self.class.Model.first(params[:id])
+              @model = find_first( self.class.Model, params[:id] )
               raise NotFound unless @model
-              if @model.destroy!
+              if delete( @model )
                 redirect url( "scaffold_#{self.class.Model.plural_name}" )
               else
                 raise BadRequest
@@ -168,13 +168,44 @@ module MerbAutoScaffold
             end
           end
 
+          def find_first( klass, *params )
+            # wanted to use klass.superclass here, but the case statment seems to be checking the
+            # class of klass.superclass instead of an equality check
+            case klass.new
+              when ActiveRecord::Base then return klass.find(:first, *params)
+              when DataMapper::Base   then return klass.first( *params )
+            end
+          end
+
+          def find_all( klass, *params )
+            case klass.new
+              when ActiveRecord::Base then return klass.find(:all, *params)
+              when DataMapper::Base   then return klass.all( *params )
+            end
+          end
+
+          def delete( obj )
+            case obj
+              when ActiveRecord::Base then return obj.destroy
+              when DataMapper::Base   then return obj.destroy!
+            end
+          end
+
+          def clear_association( object, assoc )
+            rel = object.send( assoc.name )
+            case object
+              when ActiveRecord::Base then rel.clear
+              when DataMapper::Base   then rel.nullify_association
+            end
+            rel
+          end
+
           def update_has_many_association( assoc, model, ids )
-            rel = model.send( assoc.name )
             # remove all of the associated items
-            rel.nullify_association
+            rel = clear_association( model, assoc )
 
             # add all of the objects to the relationship
-            for obj in assoc.associated_table.klass.all( :id.in => ids )
+            for obj in find_all( assoc.klass, :conditions => ['id in (?)', ids] )
               rel << obj
             end
             model.save

@@ -1,0 +1,534 @@
+Wed, 21 May 2008 12:04:24 GMT  ~  info  ~  Logfile created
+ ~ Could not load ./spec/activerecord/app/models/comment.rb:
+
+uninitialized constant ActiveRecord - (NameError)
+
+./spec/activerecord/app/models/comment.rb:1
+/opt/local/lib/ruby/gems/1.8/gems/merb-core-0.9.3/lib/merb-core/bootloader.rb:329:in `load'
+/opt/local/lib/ruby/gems/1.8/gems/merb-core-0.9.3/lib/merb-core/bootloader.rb:329:in `load_file'
+/opt/local/lib/ruby/gems/1.8/gems/merb-core-0.9.3/lib/merb-core/bootloader.rb:354:in `load_classes_with_requirements'
+/opt/local/lib/ruby/gems/1.8/gems/merb-core-0.9.3/lib/merb-core/bootloader.rb:351:in `each'
+/opt/local/lib/ruby/gems/1.8/gems/merb-core-0.9.3/lib/merb-core/bootloader.rb:351:in `load_classes_with_requirements'
+/opt/local/lib/ruby/gems/1.8/gems/merb-core-0.9.3/lib/merb-core/bootloader.rb:322:in `run'
+/opt/local/lib/ruby/gems/1.8/gems/merb-core-0.9.3/lib/merb-core/bootloader.rb:67:in `run'
+/opt/local/lib/ruby/gems/1.8/gems/merb-core-0.9.3/lib/merb-core/server.rb:43:in `start'
+/opt/local/lib/ruby/gems/1.8/gems/merb-core-0.9.3/lib/merb-core.rb:36:in `start'
+/opt/local/lib/ruby/gems/1.8/gems/merb-core-0.9.3/lib/merb-core.rb:47:in `start_environment'
+./spec/activerecord/spec_helper.rb:26
+spec/activerecord/merb_autoscaffold_spec.rb:1:in `require'
+spec/activerecord/merb_autoscaffold_spec.rb:1
+ ~ Using in-memory sessions; sessions will be lost whenever the server stops.
+ ~ Using in-memory sessions; sessions will be lost whenever the server stops.
+ ~ Using in-memory sessions; sessions will be lost whenever the server stops.
+ ~ Using in-memory sessions; sessions will be lost whenever the server stops.
+ ~ Using in-memory sessions; sessions will be lost whenever the server stops.
+ ~ Using in-memory sessions; sessions will be lost whenever the server stops.
+ ~ Using in-memory sessions; sessions will be lost whenever the server stops.
+ ~ Using in-memory sessions; sessions will be lost whenever the server stops.
+ ~ Using in-memory sessions; sessions will be lost whenever the server stops.
+ ~ Using in-memory sessions; sessions will be lost whenever the server stops.
+ ~ Using in-memory sessions; sessions will be lost whenever the server stops.
+ ~ Using in-memory sessions; sessions will be lost whenever the server stops.
+ ~ Using in-memory sessions; sessions will be lost whenever the server stops.
+ ~ Using in-memory sessions; sessions will be lost whenever the server stops.
+ ~ Using in-memory sessions; sessions will be lost whenever the server stops.
+ ~ Using in-memory sessions; sessions will be lost whenever the server stops.
+ ~ Using in-memory sessions; sessions will be lost whenever the server stops.
+ ~ Using in-memory sessions; sessions will be lost whenever the server stops.
+ ~ Using in-memory sessions; sessions will be lost whenever the server stops.
+ ~ Using in-memory sessions; sessions will be lost whenever the server stops.
+ ~ Using in-memory sessions; sessions will be lost whenever the server stops.
+ ~ Using in-memory sessions; sessions will be lost whenever the server stops.
+ ~ Using in-memory sessions; sessions will be lost whenever the server stops.
+ ~ Using in-memory sessions; sessions will be lost whenever the server stops.
+ ~ Using in-memory sessions; sessions will be lost whenever the server stops.
+ ~ Cookie set: _session_id => 3e3a24a7cad94d73799545a8bb65dc36 -- {"path"=>"/"}
+ ~ {:after_filters_time=>1.1e-05, :before_filters_time=>1.4e-05, :action_time=>0.012282}
+ ~ Using in-memory sessions; sessions will be lost whenever the server stops.
+ ~ Cookie set: _session_id => b7d96a058785429b145c89394cd4d1a8 -- {"path"=>"/"}
+ ~ {:after_filters_time=>1.2e-05, :before_filters_time=>1.3e-05, :action_time=>0.00805}
+ ~ Cookie set: _session_id => fd1b687d24a9583e391df8252436526e -- {"path"=>"/"}
+ ~ {:after_filters_time=>1.2e-05, :before_filters_time=>2.8e-05, :action_time=>0.00674}
+ ~ Cookie set: _session_id => f5260cd1f846017023dff98d39223cbf -- {"path"=>"/"}
+ ~ {:after_filters_time=>1.2e-05, :before_filters_time=>1.6e-05, :action_time=>0.008068}
+ ~ Cookie set: _session_id => 126b05c110e7b2b5257d1ca61f762cd3 -- {"path"=>"/"}
+ ~ Cookie set: _session_id => 75154868ba8a57203296ea3b2e0a2f23 -- {"path"=>"/"}
+ ~ {:after_filters_time=>2.0e-05, :before_filters_time=>1.3e-05, :action_time=>0.007145}
+ ~ Cookie set: _session_id => 64313d7989fc5494ccc699a17cbd4059 -- {"path"=>"/"}
+ ~ Cookie set: _session_id => ee3d5dd82f08c1461e470650688a9004 -- {"path"=>"/"}
+ ~ Cookie set: _session_id => 12a8316732b894947e102cbe8f32c0c6 -- {"path"=>"/"}
+ ~ {:after_filters_time=>1.3e-05, :before_filters_time=>2.2e-05, :action_time=>0.008971}
+ ~ Cookie set: _session_id => 0cf62fc4fb9dbd37620622b2619b514b -- {"path"=>"/"}
+ ~ {:after_filters_time=>1.0e-05, :before_filters_time=>1.1e-05, :action_time=>0.007516}
+ ~ Cookie set: _session_id => dd801ba88f5aad45890d6bea93a92b45 -- {"path"=>"/"}
+ ~ {:after_filters_time=>1.3e-05, :before_filters_time=>2.3e-05, :action_time=>0.005221}
+ ~ Cookie set: _session_id => 61eb1d5dbd215739141d764c32c9035c -- {"path"=>"/"}
+ ~ {:after_filters_time=>9.0e-06, :before_filters_time=>2.3e-05, :action_time=>0.003735}
+ ~ Cookie set: _session_id => e83ca9f27b125788c2331e924cb08cfa -- {"path"=>"/"}
+ ~ {:after_filters_time=>1.3e-05, :before_filters_time=>1.6e-05, :action_time=>0.005395}
+ ~ Cookie set: _session_id => 8e3ee4e65f5e94f5ed43659c46e0520f -- {"path"=>"/"}
+ ~ Cookie set: _session_id => d9d87580c37bb8f301a243023c6248dc -- {"path"=>"/"}
+ ~ {:after_filters_time=>8.0e-06, :before_filters_time=>1.7e-05, :action_time=>0.004127}
+ ~ Cookie set: _session_id => cc4e218e6439a4a018c20937ff843588 -- {"path"=>"/"}
+ ~ {:after_filters_time=>1.3e-05, :before_filters_time=>2.0e-05, :action_time=>0.00465}
+ ~ Cookie set: _session_id => 6c43b01aa40ac9db766382875a8b6bc9 -- {"path"=>"/"}
+ ~ {:after_filters_time=>1.2e-05, :before_filters_time=>2.0e-05, :action_time=>0.004719}
+ ~ Cookie set: _session_id => d4946d2ec398c9f1c66983e1f879e53b -- {"path"=>"/"}
+ ~ Cookie set: _session_id => 01f9d5eefdb914d1571a351b14647d1a -- {"path"=>"/"}
+ ~ {:after_filters_time=>1.4e-05, :before_filters_time=>1.8e-05, :action_time=>0.006469}
+ ~ Cookie set: _session_id => 397c8b8a860df4d7809d0ef8e9e713ef -- {"path"=>"/"}
+ ~ {:after_filters_time=>1.2e-05, :before_filters_time=>1.6e-05, :action_time=>0.005677}
+ ~ Cookie set: _session_id => 920017ace8cfc68a4dcb68e95ad5f5c3 -- {"path"=>"/"}
+ ~ {:after_filters_time=>1.3e-05, :before_filters_time=>1.6e-05, :action_time=>0.005722}
+ ~ Using in-memory sessions; sessions will be lost whenever the server stops.
+ ~ Cookie set: _session_id => 311ff5c4f81fe947f0cfcd30aba12153 -- {"path"=>"/"}
+ ~ {:after_filters_time=>1.5e-05, :before_filters_time=>1.2e-05, :action_time=>0.008793}
+ ~ Cookie set: _session_id => 531dbd7f132339b5fb35173fbc991f5c -- {"path"=>"/"}
+ ~ Cookie set: _session_id => 7feed43a0e7cfcee6c688582bb2d2f22 -- {"path"=>"/"}
+ ~ Cookie set: _session_id => 6dad3c4d57bdc6849614be72707de48e -- {"path"=>"/"}
+ ~ Cookie set: _session_id => c81a467bdcc5e0d2a1465ebacc7ac006 -- {"path"=>"/"}
+ ~ Cookie set: _session_id => e2ad65e7c5a2615639b3fa41d370d264 -- {"path"=>"/"}
+ ~ Cookie set: _session_id => 1ecaac27260e91e571b7efeea609992f -- {"path"=>"/"}
+ ~ Cookie set: _session_id => 5dd2d630c282d256e99a52a70bd9944c -- {"path"=>"/"}
+ ~ {:after_filters_time=>1.2e-05, :before_filters_time=>2.5e-05, :action_time=>0.009165}
+ ~ Cookie set: _session_id => ded09c66378526763e3aa52a09730362 -- {"path"=>"/"}
+ ~ {:after_filters_time=>1.2e-05, :before_filters_time=>1.5e-05, :action_time=>0.009193}
+ ~ Using in-memory sessions; sessions will be lost whenever the server stops.
+ ~ Cookie set: _session_id => 5db03b812b92477f2e560272ffdb4eab -- {"path"=>"/"}
+ ~ {:after_filters_time=>1.0e-05, :before_filters_time=>1.2e-05, :action_time=>0.007664}
+ ~ Cookie set: _session_id => 2d57df8fd586f529a8c8a5f5af3a4410 -- {"path"=>"/"}
+ ~ Cookie set: _session_id => a11a7441fc3d0c4c4c28d4dcd83de857 -- {"path"=>"/"}
+ ~ Cookie set: _session_id => 0a3b4fa99754bfe1d17f394b2da095a8 -- {"path"=>"/"}
+ ~ Cookie set: _session_id => 86cb2c2ffef831c6415615154fdcb2ee -- {"path"=>"/"}
+ ~ Cookie set: _session_id => af337ef0cddddb279682352240c6a48b -- {"path"=>"/"}
+ ~ Cookie set: _session_id => 306f2833731667fb1cc3d20231cc1e17 -- {"path"=>"/"}
+ ~ Cookie set: _session_id => 7bf1ddc6bedf5b107fbd67caa1e74962 -- {"path"=>"/"}
+ ~ {:after_filters_time=>1.3e-05, :before_filters_time=>2.4e-05, :action_time=>0.00902}
+ ~ Cookie set: _session_id => 87f28628638314188113a8bc55fbbc3c -- {"path"=>"/"}
+ ~ {:after_filters_time=>1.2e-05, :before_filters_time=>2.2e-05, :action_time=>0.009898}
+ ~ Using in-memory sessions; sessions will be lost whenever the server stops.
+ ~ Cookie set: _session_id => 8c01d5d568295e0d9d0774b392caa09a -- {"path"=>"/"}
+ ~ {:after_filters_time=>1.1e-05, :before_filters_time=>1.2e-05, :action_time=>0.008317}
+ ~ Cookie set: _session_id => 56b06cd5ba3cf00ef47259558a5b7051 -- {"path"=>"/"}
+ ~ Cookie set: _session_id => 4646348a6958298f679bf2ba4a083963 -- {"path"=>"/"}
+ ~ Cookie set: _session_id => 8e1aec6be1aa98106327244400b03cae -- {"path"=>"/"}
+ ~ Cookie set: _session_id => 074063e9a21b2ba226572c84a0351fa1 -- {"path"=>"/"}
+ ~ Cookie set: _session_id => c4b7ad332b17ad8558499d2a59bbdaa6 -- {"path"=>"/"}
+ ~ Cookie set: _session_id => c4133622a0a3fd08eaf3be4dfa3a5502 -- {"path"=>"/"}
+ ~ Cookie set: _session_id => a342cb146bedc2f374215ba8228629fc -- {"path"=>"/"}
+ ~ {:after_filters_time=>1.2e-05, :before_filters_time=>2.5e-05, :action_time=>0.009054}
+ ~ Cookie set: _session_id => df451d87bb96f76a5c70d6a8031baae5 -- {"path"=>"/"}
+ ~ {:after_filters_time=>1.2e-05, :before_filters_time=>4.1e-05, :action_time=>0.008887}
+ ~ Using in-memory sessions; sessions will be lost whenever the server stops.
+ ~ Cookie set: _session_id => ab52fe51168faa46b2015a92c6494e15 -- {"path"=>"/"}
+ ~ {:after_filters_time=>1.2e-05, :before_filters_time=>1.1e-05, :action_time=>0.007702}
+ ~ Cookie set: _session_id => a10df55a3994f03496a05417e96e204f -- {"path"=>"/"}
+ ~ {:after_filters_time=>1.3e-05, :before_filters_time=>1.7e-05, :action_time=>0.006841}
+ ~ Cookie set: _session_id => b0f197cdc100212e510bf23d34a76c1e -- {"path"=>"/"}
+ ~ {:after_filters_time=>1.0e-05, :before_filters_time=>1.4e-05, :action_time=>0.007852}
+ ~ Cookie set: _session_id => 439201404066dcadab848ffaf26cedaa -- {"path"=>"/"}
+ ~ Cookie set: _session_id => bacdb2e0f1b47edbb95b0b27e525cfd1 -- {"path"=>"/"}
+ ~ {:after_filters_time=>1.2e-05, :before_filters_time=>1.5e-05, :action_time=>0.006198}
+ ~ Cookie set: _session_id => 3cae2f0fc2ff91eba354cbbff03ade78 -- {"path"=>"/"}
+ ~ Cookie set: _session_id => fa4a444a3d671994d5960b1a4834d9d2 -- {"path"=>"/"}
+ ~ Cookie set: _session_id => 482537c6db164bd0eeb7274107056e5c -- {"path"=>"/"}
+ ~ {:after_filters_time=>1.2e-05, :before_filters_time=>2.4e-05, :action_time=>0.009027}
+ ~ Cookie set: _session_id => 6de19a8870569aefe8cc0d158d83adb8 -- {"path"=>"/"}
+ ~ {:after_filters_time=>1.4e-05, :before_filters_time=>1.9e-05, :action_time=>0.009024}
+ ~ Cookie set: _session_id => f4157cdcaa009d4452e05c0f1a2411a1 -- {"path"=>"/"}
+ ~ {:after_filters_time=>1.3e-05, :before_filters_time=>2.3e-05, :action_time=>0.005158}
+ ~ Cookie set: _session_id => 94718c026219f066e91d6035ef13d407 -- {"path"=>"/"}
+ ~ {:after_filters_time=>1.5e-05, :before_filters_time=>2.0e-05, :action_time=>0.005917}
+ ~ Cookie set: _session_id => ca8119f35ec3137f1239f991a12ea30c -- {"path"=>"/"}
+ ~ {:after_filters_time=>1.3e-05, :before_filters_time=>2.4e-05, :action_time=>0.005255}
+ ~ Cookie set: _session_id => ead8da98e0b6835c34870cd5ed65f3f0 -- {"path"=>"/"}
+ ~ Cookie set: _session_id => c9c26269e370399801f33558448657d7 -- {"path"=>"/"}
+ ~ {:after_filters_time=>1.2e-05, :before_filters_time=>2.1e-05, :action_time=>0.004574}
+ ~ Cookie set: _session_id => f94282597a5dd3bec7887be4d8d1b9e3 -- {"path"=>"/"}
+ ~ {:after_filters_time=>1.1e-05, :before_filters_time=>1.5e-05, :action_time=>0.004121}
+ ~ Cookie set: _session_id => b393f9606f301e672525e2d1a9add17c -- {"path"=>"/"}
+ ~ {:after_filters_time=>1.2e-05, :before_filters_time=>2.7e-05, :action_time=>0.004592}
+ ~ Cookie set: _session_id => f5b11b2ff1a1345b36f90bf93b6b4af7 -- {"path"=>"/"}
+ ~ Cookie set: _session_id => 51327feeebd6f3f1d58e02c009ccfe93 -- {"path"=>"/"}
+ ~ {:after_filters_time=>1.4e-05, :before_filters_time=>1.8e-05, :action_time=>0.006029}
+ ~ Cookie set: _session_id => 760d9b3950e1d2d6651c77dd62134fd5 -- {"path"=>"/"}
+ ~ {:after_filters_time=>1.2e-05, :before_filters_time=>2.0e-05, :action_time=>0.005887}
+ ~ Cookie set: _session_id => dbe2dfcb0eb82e995e78d969f250ac8b -- {"path"=>"/"}
+ ~ {:after_filters_time=>1.4e-05, :before_filters_time=>1.9e-05, :action_time=>0.006004}
+ ~ Using in-memory sessions; sessions will be lost whenever the server stops.
+ ~ Cookie set: _session_id => 7d606738d6ba65dd4e214a7ac0d40178 -- {"path"=>"/"}
+ ~ {:after_filters_time=>1.2e-05, :before_filters_time=>1.0e-05, :action_time=>0.007066}
+ ~ Cookie set: _session_id => c8a7cc7bd0853b55d4e6f299aa1d577f -- {"path"=>"/"}
+ ~ {:after_filters_time=>1.3e-05, :before_filters_time=>1.8e-05, :action_time=>0.006878}
+ ~ Cookie set: _session_id => 516bd1a4d3439a96dd7b5b795a6d15eb -- {"path"=>"/"}
+ ~ {:after_filters_time=>1.2e-05, :before_filters_time=>1.6e-05, :action_time=>0.00865}
+ ~ Cookie set: _session_id => 409758c5cad0e2f6361992b0d3c6b197 -- {"path"=>"/"}
+ ~ Cookie set: _session_id => 6bfe65d41c95f2e515cac6ff20105b24 -- {"path"=>"/"}
+ ~ {:after_filters_time=>1.4e-05, :before_filters_time=>1.4e-05, :action_time=>0.008209}
+ ~ Cookie set: _session_id => ea6ee01661665d07b6b8bab4d7dbe16c -- {"path"=>"/"}
+ ~ Cookie set: _session_id => 23410150d2ae1b352ae1bf87414aac28 -- {"path"=>"/"}
+ ~ Cookie set: _session_id => 55e42b0599d4245eaad8bdaeab3332a2 -- {"path"=>"/"}
+ ~ {:after_filters_time=>1.2e-05, :before_filters_time=>1.7e-05, :action_time=>0.008577}
+ ~ Cookie set: _session_id => 91485911951be1db677c25955c78a882 -- {"path"=>"/"}
+ ~ {:after_filters_time=>1.2e-05, :before_filters_time=>2.0e-05, :action_time=>0.009067}
+ ~ Cookie set: _session_id => d0ce0d9e020c4551ea1011cae2b19887 -- {"path"=>"/"}
+ ~ {:after_filters_time=>1.1e-05, :before_filters_time=>1.8e-05, :action_time=>0.00458}
+ ~ Cookie set: _session_id => 09647cb85aaa7e5c8505e74cc04cd9ef -- {"path"=>"/"}
+ ~ {:after_filters_time=>1.4e-05, :before_filters_time=>2.1e-05, :action_time=>0.005636}
+ ~ Cookie set: _session_id => a5eea0a366d8fa526766f1eb6722c3e6 -- {"path"=>"/"}
+ ~ {:after_filters_time=>1.2e-05, :before_filters_time=>2.0e-05, :action_time=>0.005286}
+ ~ Cookie set: _session_id => 54797d2cfe7582eaaf9a6e8d1faa65d3 -- {"path"=>"/"}
+ ~ Cookie set: _session_id => 7bbb4258fe24902a34e70581ac7286b9 -- {"path"=>"/"}
+ ~ {:after_filters_time=>1.4e-05, :before_filters_time=>2.2e-05, :action_time=>0.004571}
+ ~ Cookie set: _session_id => 98b2cc5e6e013b573f4311bfbd88d7e2 -- {"path"=>"/"}
+ ~ {:after_filters_time=>1.4e-05, :before_filters_time=>2.1e-05, :action_time=>0.004845}
+ ~ Cookie set: _session_id => 23f687a4b7616c49dd58a96d65172c2b -- {"path"=>"/"}
+ ~ {:after_filters_time=>1.2e-05, :before_filters_time=>1.6e-05, :action_time=>0.005244}
+ ~ Cookie set: _session_id => 34250f92f54106dcac454e30d7aef282 -- {"path"=>"/"}
+ ~ Cookie set: _session_id => 090c74be3a84bacbc15ef3d15957be32 -- {"path"=>"/"}
+ ~ {:after_filters_time=>1.3e-05, :before_filters_time=>2.3e-05, :action_time=>0.005999}
+ ~ Cookie set: _session_id => b464510a66025545fa852d45f3fb9b2c -- {"path"=>"/"}
+ ~ {:after_filters_time=>1.2e-05, :before_filters_time=>3.2e-05, :action_time=>0.006467}
+ ~ Cookie set: _session_id => dd1c62af99f12fffd9a7d5e9de110d51 -- {"path"=>"/"}
+ ~ {:after_filters_time=>1.3e-05, :before_filters_time=>1.5e-05, :action_time=>0.005791}
+ ~ Using in-memory sessions; sessions will be lost whenever the server stops.
+ ~ Cookie set: _session_id => 508b3349c1d8b6941bc28638090ed44d -- {"path"=>"/"}
+ ~ {:after_filters_time=>1.4e-05, :before_filters_time=>1.3e-05, :action_time=>0.008759}
+ ~ Cookie set: _session_id => 0a217e04b0a513fed3ea078a069da967 -- {"path"=>"/"}
+ ~ {:after_filters_time=>1.1e-05, :before_filters_time=>1.6e-05, :action_time=>0.006208}
+ ~ Cookie set: _session_id => 3fef281ada1626890ca24c9c29e683d8 -- {"path"=>"/"}
+ ~ {:after_filters_time=>1.1e-05, :before_filters_time=>1.7e-05, :action_time=>0.008942}
+ ~ Cookie set: _session_id => 95f1737651cc56ed54f8d0f1136bb25f -- {"path"=>"/"}
+ ~ Cookie set: _session_id => dcc6915e92f982f2916313e5fb169261 -- {"path"=>"/"}
+ ~ {:after_filters_time=>1.0e-05, :before_filters_time=>2.1e-05, :action_time=>0.013653}
+ ~ Cookie set: _session_id => 43507b4cbdc658457b5353995f41c97f -- {"path"=>"/"}
+ ~ Cookie set: _session_id => 2361fcf90bb51e075fd2b471ecb731e0 -- {"path"=>"/"}
+ ~ Cookie set: _session_id => e874777d3e6f27fb3c3a1af8dbb53e0b -- {"path"=>"/"}
+ ~ {:after_filters_time=>1.2e-05, :before_filters_time=>1.7e-05, :action_time=>0.008755}
+ ~ Cookie set: _session_id => b5955c5df40da15511cc7311332af581 -- {"path"=>"/"}
+ ~ {:after_filters_time=>1.3e-05, :before_filters_time=>2.2e-05, :action_time=>0.009335}
+ ~ Cookie set: _session_id => 2fe0b752562a72d1b9845f9cae0d3479 -- {"path"=>"/"}
+ ~ {:after_filters_time=>1.3e-05, :before_filters_time=>2.3e-05, :action_time=>0.004997}
+ ~ Cookie set: _session_id => ef07b7d3b74608ad0562ae18392e35e0 -- {"path"=>"/"}
+ ~ {:after_filters_time=>1.2e-05, :before_filters_time=>1.9e-05, :action_time=>0.005068}
+ ~ Cookie set: _session_id => 406852cbd0e52e0e0e4e2be1b3934b65 -- {"path"=>"/"}
+ ~ {:after_filters_time=>1.2e-05, :before_filters_time=>1.9e-05, :action_time=>0.005136}
+ ~ Cookie set: _session_id => 7d96eaeb8809e5a8aacf8843d2f3173c -- {"path"=>"/"}
+ ~ Cookie set: _session_id => 17e69bd7c268ce9307104b581878fb67 -- {"path"=>"/"}
+ ~ {:after_filters_time=>1.3e-05, :before_filters_time=>1.9e-05, :action_time=>0.005177}
+ ~ Cookie set: _session_id => 8fcd9ac808094dcce795803dd5ec7f06 -- {"path"=>"/"}
+ ~ {:after_filters_time=>1.2e-05, :before_filters_time=>2.1e-05, :action_time=>0.004744}
+ ~ Cookie set: _session_id => ac74fd82a8053ab0fb91a3b271d0881e -- {"path"=>"/"}
+ ~ {:after_filters_time=>1.2e-05, :before_filters_time=>2.0e-05, :action_time=>0.004562}
+ ~ Cookie set: _session_id => 86243d3b9b5a303a360e77b99b8502e3 -- {"path"=>"/"}
+ ~ {:after_filters_time=>1.4e-05, :before_filters_time=>1.2e-05, :action_time=>0.006715}
+ ~ Cookie set: _session_id => 032d0cc33848acc0a544e82383a992ac -- {"path"=>"/"}
+ ~ {:after_filters_time=>1.3e-05, :before_filters_time=>1.8e-05, :action_time=>0.005984}
+ ~ Cookie set: _session_id => 0d05016194952310d6915441a7213b6d -- {"path"=>"/"}
+ ~ {:after_filters_time=>1.3e-05, :before_filters_time=>1.6e-05, :action_time=>0.006004}
+ ~ Cookie set: _session_id => 674eca8053f96ccec4894b5b4d82d9d2 -- {"path"=>"/"}
+ ~ {:after_filters_time=>1.4e-05, :before_filters_time=>1.5e-05, :action_time=>0.005814}
+ ~ Cookie set: _session_id => cd537c8fb22b6cbe96c5e7637eaf0b7a -- {"path"=>"/"}
+ ~ {:after_filters_time=>1.1e-05, :before_filters_time=>1.4e-05, :action_time=>0.004757}
+ ~ Using in-memory sessions; sessions will be lost whenever the server stops.
+ ~ Cookie set: _session_id => 4d57bbe520d2c86c716208cb4f7ac3a0 -- {"path"=>"/"}
+ ~ {:after_filters_time=>1.1e-05, :before_filters_time=>1.7e-05, :action_time=>0.00889}
+ ~ Cookie set: _session_id => 360e76b5f8334400f2cf9695b9ebd37a -- {"path"=>"/"}
+ ~ {:after_filters_time=>1.4e-05, :before_filters_time=>2.1e-05, :action_time=>0.007451}
+ ~ Cookie set: _session_id => 052eb95326a7a3ee8c5c0b3057ede2a0 -- {"path"=>"/"}
+ ~ {:after_filters_time=>1.2e-05, :before_filters_time=>1.9e-05, :action_time=>0.008274}
+ ~ Cookie set: _session_id => 4512b4a9b5dd1903e169c2ef1d0b0d32 -- {"path"=>"/"}
+ ~ Cookie set: _session_id => 3e763ff2a8470cf149cda3cc637eed39 -- {"path"=>"/"}
+ ~ {:after_filters_time=>1.2e-05, :before_filters_time=>1.8e-05, :action_time=>0.006784}
+ ~ Cookie set: _session_id => a9b9bdeb5cd1d586a710adcc8f0921ac -- {"path"=>"/"}
+ ~ Cookie set: _session_id => 1c4fd5acea1296e360e5ed7bae83d724 -- {"path"=>"/"}
+ ~ Cookie set: _session_id => c53432ba8520fb0b3dc7d2f6aab0ed43 -- {"path"=>"/"}
+ ~ {:after_filters_time=>1.3e-05, :before_filters_time=>2.5e-05, :action_time=>0.009242}
+ ~ Cookie set: _session_id => e89c68d82782bf650666d8c1b2f3e4ef -- {"path"=>"/"}
+ ~ {:after_filters_time=>1.3e-05, :before_filters_time=>2.1e-05, :action_time=>0.00974}
+ ~ Cookie set: _session_id => ab709a35644ac66ec0b87893dcf199cc -- {"path"=>"/"}
+ ~ {:after_filters_time=>2.9e-05, :before_filters_time=>2.4e-05, :action_time=>0.005263}
+ ~ Cookie set: _session_id => 09336535f016a93486b9f81e0e7bfaf2 -- {"path"=>"/"}
+ ~ {:after_filters_time=>1.2e-05, :before_filters_time=>2.1e-05, :action_time=>0.005164}
+ ~ Cookie set: _session_id => 5f591d2733fc7b92f0370a1cc54e4b59 -- {"path"=>"/"}
+ ~ {:after_filters_time=>1.3e-05, :before_filters_time=>1.6e-05, :action_time=>0.004751}
+ ~ Cookie set: _session_id => dd91db54827954b1daaa28455472d029 -- {"path"=>"/"}
+ ~ {:after_filters_time=>1.1e-05, :before_filters_time=>1.0e-05, :action_time=>0.003934}
+ ~ Cookie set: _session_id => 0fb9148e43f8292253c1f15365d9e946 -- {"path"=>"/"}
+ ~ {:after_filters_time=>1.2e-05, :before_filters_time=>2.2e-05, :action_time=>0.004637}
+ ~ Cookie set: _session_id => ec55e24f1cff84a57612a7b886f144ec -- {"path"=>"/"}
+ ~ {:after_filters_time=>2.4e-05, :before_filters_time=>3.3e-05, :action_time=>0.00471}
+ ~ Cookie set: _session_id => b620c24c8254feed56b1d670655ef331 -- {"path"=>"/"}
+ ~ {:after_filters_time=>1.1e-05, :before_filters_time=>1.5e-05, :action_time=>0.004215}
+ ~ Cookie set: _session_id => bdf488a8199246c7d9eace1a76eb8ecb -- {"path"=>"/"}
+ ~ {:after_filters_time=>1.1e-05, :before_filters_time=>1.3e-05, :action_time=>0.004528}
+ ~ Cookie set: _session_id => e08e6a507bc8fea989214347dd9d74f0 -- {"path"=>"/"}
+ ~ {:after_filters_time=>1.0e-05, :before_filters_time=>1.7e-05, :action_time=>0.005622}
+ ~ Cookie set: _session_id => 0f697f3d868ce26c62245abe06f33741 -- {"path"=>"/"}
+ ~ {:after_filters_time=>1.3e-05, :before_filters_time=>2.0e-05, :action_time=>0.006256}
+ ~ Cookie set: _session_id => d57256145bca69e4b7fb60460fe5a0ec -- {"path"=>"/"}
+ ~ {:after_filters_time=>1.4e-05, :before_filters_time=>2.1e-05, :action_time=>0.007184}
+ ~ Cookie set: _session_id => 30cdaec87211a27f7038208fba46bb5e -- {"path"=>"/"}
+ ~ {:after_filters_time=>1.1e-05, :before_filters_time=>1.4e-05, :action_time=>0.00455}
+ ~ Using in-memory sessions; sessions will be lost whenever the server stops.
+ ~ Cookie set: _session_id => 6f2a85923fadf709be0b01ff1d3f8c78 -- {"path"=>"/"}
+ ~ {:after_filters_time=>1.1e-05, :before_filters_time=>1.2e-05, :action_time=>0.007542}
+ ~ Cookie set: _session_id => 8a804ac39b9b45190750fec5cf323963 -- {"path"=>"/"}
+ ~ {:after_filters_time=>1.4e-05, :before_filters_time=>1.8e-05, :action_time=>0.006902}
+ ~ Cookie set: _session_id => 42165380d094b5baebc6b852184b8af4 -- {"path"=>"/"}
+ ~ {:after_filters_time=>1.3e-05, :before_filters_time=>2.0e-05, :action_time=>0.008682}
+ ~ Cookie set: _session_id => 7604b4d45649b3bdcbd9d5e4b96b619e -- {"path"=>"/"}
+ ~ Cookie set: _session_id => b088845693538b20b5afe48f672c3825 -- {"path"=>"/"}
+ ~ {:after_filters_time=>1.3e-05, :before_filters_time=>1.4e-05, :action_time=>0.007036}
+ ~ Cookie set: _session_id => fd686109652f0f4fc1858e617ea591e4 -- {"path"=>"/"}
+ ~ Cookie set: _session_id => 01e0756c3d727ca0ec458f383678085c -- {"path"=>"/"}
+ ~ Cookie set: _session_id => ab4ffddb06ff3b93f0c91899cffe9c09 -- {"path"=>"/"}
+ ~ {:after_filters_time=>1.2e-05, :before_filters_time=>1.7e-05, :action_time=>0.008485}
+ ~ Cookie set: _session_id => f6db8cee0c6e62978f01a23ec996c527 -- {"path"=>"/"}
+ ~ {:after_filters_time=>1.3e-05, :before_filters_time=>1.9e-05, :action_time=>0.009265}
+ ~ Cookie set: _session_id => 77a24b22d7f693880cac726d1e53cb3c -- {"path"=>"/"}
+ ~ {:after_filters_time=>1.2e-05, :before_filters_time=>2.2e-05, :action_time=>0.005083}
+ ~ Cookie set: _session_id => a9296142e7cee9c30dd0c65c2a5fe532 -- {"path"=>"/"}
+ ~ {:after_filters_time=>1.4e-05, :before_filters_time=>8.6e-05, :action_time=>0.006062}
+ ~ Cookie set: _session_id => 118e722e47d4c5d27168bd1fcecaf7ab -- {"path"=>"/"}
+ ~ {:after_filters_time=>1.5e-05, :before_filters_time=>2.7e-05, :action_time=>0.005714}
+ ~ Cookie set: _session_id => 6396f9290bac0a0f75a430314a47d58a -- {"path"=>"/"}
+ ~ {:after_filters_time=>1.1e-05, :before_filters_time=>1.4e-05, :action_time=>0.004723}
+ ~ Cookie set: _session_id => db6623505823caf3659bd22e65d3e4f5 -- {"path"=>"/"}
+ ~ {:after_filters_time=>1.4e-05, :before_filters_time=>1.7e-05, :action_time=>0.004582}
+ ~ Cookie set: _session_id => 2896623447405a4c6b6662bb19964344 -- {"path"=>"/"}
+ ~ {:after_filters_time=>1.2e-05, :before_filters_time=>2.0e-05, :action_time=>0.00454}
+ ~ Cookie set: _session_id => 970c6e6d76379a660396758083aaaec2 -- {"path"=>"/"}
+ ~ {:after_filters_time=>1.3e-05, :before_filters_time=>2.0e-05, :action_time=>0.004631}
+ ~ Cookie set: _session_id => 468f4e588a167223cef31064288c9ffe -- {"path"=>"/"}
+ ~ {:after_filters_time=>1.3e-05, :before_filters_time=>1.5e-05, :action_time=>0.005676}
+ ~ Cookie set: _session_id => 99a8911353bbae3d4ceb4acf228c6def -- {"path"=>"/"}
+ ~ {:after_filters_time=>1.3e-05, :before_filters_time=>1.7e-05, :action_time=>0.006007}
+ ~ Cookie set: _session_id => aefa903b6e7bdea73e66703a5bc944df -- {"path"=>"/"}
+ ~ {:after_filters_time=>1.4e-05, :before_filters_time=>1.5e-05, :action_time=>0.006138}
+ ~ Cookie set: _session_id => 791ed6c52db8f06b5581f91743cb02de -- {"path"=>"/"}
+ ~ {:after_filters_time=>1.4e-05, :before_filters_time=>1.5e-05, :action_time=>0.005683}
+ ~ Cookie set: _session_id => e716d6531effbea760affe7f5d359c7c -- {"path"=>"/"}
+ ~ {:after_filters_time=>1.2e-05, :before_filters_time=>1.7e-05, :action_time=>0.004762}
+ ~ Using in-memory sessions; sessions will be lost whenever the server stops.
+ ~ Cookie set: _session_id => 86970ed3f2fa8dd4c0ea4015df7d9612 -- {"path"=>"/"}
+ ~ {:after_filters_time=>1.2e-05, :before_filters_time=>1.4e-05, :action_time=>0.008623}
+ ~ Cookie set: _session_id => f3de1ff40c281d72b1abefa095cf2121 -- {"path"=>"/"}
+ ~ {:after_filters_time=>1.4e-05, :before_filters_time=>1.7e-05, :action_time=>0.006683}
+ ~ Cookie set: _session_id => 6a6661290437d0f85061c3fa5e35612f -- {"path"=>"/"}
+ ~ {:after_filters_time=>1.3e-05, :before_filters_time=>1.6e-05, :action_time=>0.008484}
+ ~ Cookie set: _session_id => a7717ebb22eaefd6eae0ac33842805c0 -- {"path"=>"/"}
+ ~ Cookie set: _session_id => ec3144b05a4b7e4ff566c34df68955b2 -- {"path"=>"/"}
+ ~ {:after_filters_time=>1.2e-05, :before_filters_time=>1.9e-05, :action_time=>0.00663}
+ ~ Cookie set: _session_id => fb48ef0e807c555d7a35f8e68eed42e2 -- {"path"=>"/"}
+ ~ Cookie set: _session_id => d80509e876e404d3f53534b77f608c3c -- {"path"=>"/"}
+ ~ Redirecting to: /scaffolds/blogs
+ ~ {:after_filters_time=>1.7e-05, :before_filters_time=>1.7e-05, :action_time=>0.004249}
+ ~ Cookie set: _session_id => 2da368f6b2682335e4ee0fe8160e36e1 -- {"path"=>"/"}
+ ~ {:after_filters_time=>1.2e-05, :before_filters_time=>1.7e-05, :action_time=>0.00907}
+ ~ Cookie set: _session_id => 435bf4541986671ef54df6b71a01f785 -- {"path"=>"/"}
+ ~ {:after_filters_time=>1.2e-05, :before_filters_time=>2.0e-05, :action_time=>0.009445}
+ ~ Cookie set: _session_id => aac0c4aebbfaf4d8ec80d52a446dfb47 -- {"path"=>"/"}
+ ~ {:after_filters_time=>1.3e-05, :before_filters_time=>2.2e-05, :action_time=>0.005125}
+ ~ Cookie set: _session_id => 9dcb780cfe55f6cc14d017f1d5215422 -- {"path"=>"/"}
+ ~ {:after_filters_time=>1.3e-05, :before_filters_time=>1.9e-05, :action_time=>0.005413}
+ ~ Cookie set: _session_id => 557b6983104ed1a2f7efff8265c47908 -- {"path"=>"/"}
+ ~ {:after_filters_time=>1.3e-05, :before_filters_time=>3.0e-05, :action_time=>0.005365}
+ ~ Cookie set: _session_id => 779e3c6c3c1780fa336c7d6231758e84 -- {"path"=>"/"}
+ ~ {:after_filters_time=>1.3e-05, :before_filters_time=>1.5e-05, :action_time=>0.004678}
+ ~ Cookie set: _session_id => 29d0a6a12948ed1614e7d26776b217f1 -- {"path"=>"/"}
+ ~ {:after_filters_time=>1.2e-05, :before_filters_time=>2.2e-05, :action_time=>0.004697}
+ ~ Cookie set: _session_id => 21a0e5d398f32154f70b13305614c546 -- {"path"=>"/"}
+ ~ {:after_filters_time=>1.2e-05, :before_filters_time=>1.6e-05, :action_time=>0.004674}
+ ~ Cookie set: _session_id => d5e18d6ee8ecf133f485a60986756829 -- {"path"=>"/"}
+ ~ {:after_filters_time=>1.2e-05, :before_filters_time=>3.3e-05, :action_time=>0.004611}
+ ~ Cookie set: _session_id => e38c7a56261f02ade680e1733ef0fb79 -- {"path"=>"/"}
+ ~ {:after_filters_time=>1.1e-05, :before_filters_time=>1.5e-05, :action_time=>0.004999}
+ ~ Cookie set: _session_id => d1357567290623224f783716855091e7 -- {"path"=>"/"}
+ ~ {:after_filters_time=>1.3e-05, :before_filters_time=>2.3e-05, :action_time=>0.006042}
+ ~ Cookie set: _session_id => cfed92ca446edbe101ca77e2310c1b16 -- {"path"=>"/"}
+ ~ {:after_filters_time=>1.5e-05, :before_filters_time=>2.0e-05, :action_time=>0.005999}
+ ~ Cookie set: _session_id => 22cd0daa56e770c6d70653ff5b3c41f7 -- {"path"=>"/"}
+ ~ {:after_filters_time=>1.5e-05, :before_filters_time=>1.5e-05, :action_time=>0.006271}
+ ~ Cookie set: _session_id => 092f5a4ef7c287f05e8fa06167b36ce0 -- {"path"=>"/"}
+ ~ {:after_filters_time=>1.5e-05, :before_filters_time=>1.7e-05, :action_time=>0.004845}
+ ~ Using in-memory sessions; sessions will be lost whenever the server stops.
+ ~ Cookie set: _session_id => fbc8f0a5d8050e8aeca234f61a7f146c -- {"path"=>"/"}
+ ~ {:after_filters_time=>1.5e-05, :before_filters_time=>1.4e-05, :action_time=>0.146937}
+ ~ Cookie set: _session_id => f2ecbd07e9962f0caa4d4dc3d23c403a -- {"path"=>"/"}
+ ~ {:after_filters_time=>1.4e-05, :before_filters_time=>2.2e-05, :action_time=>0.006838}
+ ~ Cookie set: _session_id => 7e5f3dc10c0b5e8eb25e8925b52ca160 -- {"path"=>"/"}
+ ~ {:after_filters_time=>1.2e-05, :before_filters_time=>1.6e-05, :action_time=>0.008915}
+ ~ Cookie set: _session_id => 18b52fd61bfd34669f03136eada76098 -- {"path"=>"/"}
+ ~ Cookie set: _session_id => 25a651e23f6e41eb33e4bf6e184cf0df -- {"path"=>"/"}
+ ~ {:after_filters_time=>1.5e-05, :before_filters_time=>1.8e-05, :action_time=>0.007401}
+ ~ Cookie set: _session_id => 011af0e131201ee146eb624685d31938 -- {"path"=>"/"}
+ ~ Cookie set: _session_id => 3864723ace8a5917f9d1dcbad2bff52a -- {"path"=>"/"}
+ ~ Redirecting to: /scaffolds/blogs
+ ~ {:after_filters_time=>1.8e-05, :before_filters_time=>1.7e-05, :action_time=>0.004572}
+ ~ Cookie set: _session_id => 5b160b5683f561d9b6be98ee5d774dde -- {"path"=>"/"}
+ ~ {:after_filters_time=>1.4e-05, :before_filters_time=>1.7e-05, :action_time=>0.009116}
+ ~ Cookie set: _session_id => fa9df1eb7a19a4d8bdfdd156794b894a -- {"path"=>"/"}
+ ~ {:after_filters_time=>1.3e-05, :before_filters_time=>1.5e-05, :action_time=>0.008045}
+ ~ Cookie set: _session_id => 86a8d5ce578f367328f84dc415549d6e -- {"path"=>"/"}
+ ~ {:after_filters_time=>1.4e-05, :before_filters_time=>1.7e-05, :action_time=>0.004845}
+ ~ Cookie set: _session_id => 0bb68d354f5fb55c9086a926f4125075 -- {"path"=>"/"}
+ ~ {:after_filters_time=>1.4e-05, :before_filters_time=>2.1e-05, :action_time=>0.005061}
+ ~ Cookie set: _session_id => 0c6962e96a04fcc31171e17c27a2f1ea -- {"path"=>"/"}
+ ~ {:after_filters_time=>1.3e-05, :before_filters_time=>1.8e-05, :action_time=>0.010236}
+ ~ Cookie set: _session_id => ea8ed7fe47a5bd17a1e1d684c05a32eb -- {"path"=>"/"}
+ ~ {:after_filters_time=>1.0e-05, :before_filters_time=>1.0e-05, :action_time=>0.003831}
+ ~ Cookie set: _session_id => bd09ca327efbdb8590cb3bde628bb00d -- {"path"=>"/"}
+ ~ {:after_filters_time=>1.5e-05, :before_filters_time=>3.0e-05, :action_time=>0.006005}
+ ~ Cookie set: _session_id => 787ce3933e75c75181507ebe66e0caae -- {"path"=>"/"}
+ ~ {:after_filters_time=>1.2e-05, :before_filters_time=>1.7e-05, :action_time=>0.004105}
+ ~ Cookie set: _session_id => a8e13b7419ec8473de15eb593038521a -- {"path"=>"/"}
+ ~ {:after_filters_time=>1.2e-05, :before_filters_time=>1.2e-05, :action_time=>0.003219}
+ ~ Cookie set: _session_id => b53f97b3195c82092ea6cd3df1b4f9af -- {"path"=>"/"}
+ ~ {:after_filters_time=>9.0e-06, :before_filters_time=>1.0e-05, :action_time=>0.003734}
+ ~ Cookie set: _session_id => 32a6d20cdece4ab4b1f20e6f97b95f59 -- {"path"=>"/"}
+ ~ {:after_filters_time=>1.5e-05, :before_filters_time=>2.2e-05, :action_time=>0.006188}
+ ~ Cookie set: _session_id => 2be84bdf984f90fdff8bda857a98b6d5 -- {"path"=>"/"}
+ ~ {:after_filters_time=>1.5e-05, :before_filters_time=>1.7e-05, :action_time=>0.005881}
+ ~ Cookie set: _session_id => d1b00e0e313c88131e56f5b07eb322e9 -- {"path"=>"/"}
+ ~ {:after_filters_time=>1.6e-05, :before_filters_time=>2.7e-05, :action_time=>0.00585}
+ ~ Cookie set: _session_id => 18f432c9795e41f3f420297ac4dc20a9 -- {"path"=>"/"}
+ ~ {:after_filters_time=>1.0e-05, :before_filters_time=>1.3e-05, :action_time=>0.004699}
+ ~ Using in-memory sessions; sessions will be lost whenever the server stops.
+ ~ Cookie set: _session_id => 1a111f474a23b8fb0c0be49a47ac4407 -- {"path"=>"/"}
+ ~ {:after_filters_time=>1.1e-05, :before_filters_time=>1.4e-05, :action_time=>0.008206}
+ ~ Cookie set: _session_id => e178ab0905a530ea20ea4db7bea8ef82 -- {"path"=>"/"}
+ ~ {:after_filters_time=>1.0e-05, :before_filters_time=>1.5e-05, :action_time=>0.006009}
+ ~ Cookie set: _session_id => 7188949fdf98c918a3ac0a61baf19fda -- {"path"=>"/"}
+ ~ {:after_filters_time=>1.2e-05, :before_filters_time=>1.3e-05, :action_time=>0.007408}
+ ~ Cookie set: _session_id => 6bcdf2edc7a54d4b01a2a0c31831a30c -- {"path"=>"/"}
+ ~ Redirecting to: /scaffolds/blogs/1016
+ ~ {:after_filters_time=>1.8e-05, :before_filters_time=>1.6e-05, :action_time=>0.009489}
+ ~ Cookie set: _session_id => 339c29a76c5c28802414ce21bca8f67a -- {"path"=>"/"}
+ ~ {:after_filters_time=>1.2e-05, :before_filters_time=>1.7e-05, :action_time=>0.006169}
+ ~ Cookie set: _session_id => eddaceccd87c57334362df95ad7d2f20 -- {"path"=>"/"}
+ ~ Redirecting to: /scaffolds/blogs/1019
+ ~ {:after_filters_time=>1.8e-05, :before_filters_time=>1.3e-05, :action_time=>0.010802}
+ ~ Cookie set: _session_id => a8f0288503e7e01ff87454a59882f7f2 -- {"path"=>"/"}
+ ~ Redirecting to: /scaffolds/blogs
+ ~ {:after_filters_time=>2.5e-05, :before_filters_time=>1.7e-05, :action_time=>0.004961}
+ ~ Cookie set: _session_id => 0e4c305a8fab72dfbd6ea4a3b8f5ed49 -- {"path"=>"/"}
+ ~ {:after_filters_time=>1.2e-05, :before_filters_time=>2.3e-05, :action_time=>0.009062}
+ ~ Cookie set: _session_id => ad5e31f9926a05630a99da230ec35217 -- {"path"=>"/"}
+ ~ {:after_filters_time=>1.3e-05, :before_filters_time=>1.8e-05, :action_time=>0.009214}
+ ~ Cookie set: _session_id => 141f440d92d86e49406facc9a02394ca -- {"path"=>"/"}
+ ~ {:after_filters_time=>1.4e-05, :before_filters_time=>1.7e-05, :action_time=>0.005016}
+ ~ Cookie set: _session_id => bfbca28d069ed7a3d13ae7ac9601c392 -- {"path"=>"/"}
+ ~ {:after_filters_time=>4.7e-05, :before_filters_time=>1.8e-05, :action_time=>0.005641}
+ ~ Cookie set: _session_id => 0bd7f2642c6358e09e6a20140a9436fe -- {"path"=>"/"}
+ ~ {:after_filters_time=>1.2e-05, :before_filters_time=>1.8e-05, :action_time=>0.005343}
+ ~ Cookie set: _session_id => 8d7832ae035cb61e1b5ad58d2b444b4b -- {"path"=>"/"}
+ ~ {:after_filters_time=>1.1e-05, :before_filters_time=>1.0e-05, :action_time=>0.005696}
+ ~ Cookie set: _session_id => 6974999e8f70bde927f6ab34eb180088 -- {"path"=>"/"}
+ ~ {:after_filters_time=>1.4e-05, :before_filters_time=>3.2e-05, :action_time=>0.005223}
+ ~ Cookie set: _session_id => 4e5c93c830402425cc85441bb566b605 -- {"path"=>"/"}
+ ~ {:after_filters_time=>1.2e-05, :before_filters_time=>1.8e-05, :action_time=>0.004645}
+ ~ Cookie set: _session_id => 756c864c6df55a66e8ffdb5b0f4ec64d -- {"path"=>"/"}
+ ~ {:after_filters_time=>1.3e-05, :before_filters_time=>1.4e-05, :action_time=>0.005305}
+ ~ Cookie set: _session_id => 9510b5e05be2c4ad589ca85618c8c5e4 -- {"path"=>"/"}
+ ~ {:after_filters_time=>1.2e-05, :before_filters_time=>1.3e-05, :action_time=>0.005156}
+ ~ Cookie set: _session_id => 69d14567f9e90e671b7eba02e6de32f3 -- {"path"=>"/"}
+ ~ {:after_filters_time=>2.2e-05, :before_filters_time=>1.8e-05, :action_time=>0.006144}
+ ~ Cookie set: _session_id => 34fba30a744d3084ba2b9127c1d9f60f -- {"path"=>"/"}
+ ~ {:after_filters_time=>1.4e-05, :before_filters_time=>1.4e-05, :action_time=>0.007967}
+ ~ Cookie set: _session_id => 9275c8db38c22ae5caa0804b5a2a86d3 -- {"path"=>"/"}
+ ~ {:after_filters_time=>1.3e-05, :before_filters_time=>2.8e-05, :action_time=>0.006073}
+ ~ Cookie set: _session_id => b77edf4a0d8feea6ba8328d928b183ba -- {"path"=>"/"}
+ ~ {:after_filters_time=>1.2e-05, :before_filters_time=>1.4e-05, :action_time=>0.004879}
+ ~ Using in-memory sessions; sessions will be lost whenever the server stops.
+ ~ Cookie set: _session_id => f89ccf91dc04935bd54e01c055dc7952 -- {"path"=>"/"}
+ ~ {:action_time=>0.008407, :after_filters_time=>1.2e-05, :before_filters_time=>1.4e-05}
+ ~ Cookie set: _session_id => 406cb512f69a10eb74cb266cef33b6c4 -- {"path"=>"/"}
+ ~ {:action_time=>0.006345, :after_filters_time=>1.3e-05, :before_filters_time=>1.7e-05}
+ ~ Cookie set: _session_id => e2493f2b888a31a4fdb064912cfa48f6 -- {"path"=>"/"}
+ ~ {:action_time=>0.008425, :after_filters_time=>1.4e-05, :before_filters_time=>2.8e-05}
+ ~ Cookie set: _session_id => 237a03303a7441af21118365371211b4 -- {"path"=>"/"}
+ ~ Redirecting to: /scaffolds/blogs/1100
+ ~ {:action_time=>0.010171, :after_filters_time=>1.4e-05, :before_filters_time=>1.5e-05}
+ ~ Cookie set: _session_id => 9f352e35e34ba0a8d0591e2564033f76 -- {"path"=>"/"}
+ ~ {:action_time=>0.00679, :after_filters_time=>1.3e-05, :before_filters_time=>1.7e-05}
+ ~ Cookie set: _session_id => 7100d0587d743746168db61c0044875c -- {"path"=>"/"}
+ ~ Redirecting to: /scaffolds/blogs/1103
+ ~ {:action_time=>0.011349, :after_filters_time=>2.3e-05, :before_filters_time=>1.3e-05}
+ ~ Cookie set: _session_id => f752c2678c229300339e2f4c2ede8025 -- {"path"=>"/"}
+ ~ Redirecting to: /scaffolds/blogs
+ ~ {:action_time=>0.004784, :after_filters_time=>2.3e-05, :before_filters_time=>1.7e-05}
+ ~ Cookie set: _session_id => 11f069cfb68277168bb95b854571d34f -- {"path"=>"/"}
+ ~ {:action_time=>0.008435, :after_filters_time=>1.1e-05, :before_filters_time=>3.3e-05}
+ ~ Cookie set: _session_id => 17dd30412738a32382254aa8ecb98d67 -- {"path"=>"/"}
+ ~ {:action_time=>0.009127, :after_filters_time=>1.3e-05, :before_filters_time=>1.9e-05}
+ ~ Cookie set: _session_id => 1045c2531fe5f6e47c2fc79d0c2ec227 -- {"path"=>"/"}
+ ~ {:action_time=>0.005257, :after_filters_time=>1.3e-05, :before_filters_time=>2.2e-05}
+ ~ Cookie set: _session_id => 561b02d88b723b8439587d2a9ad089ba -- {"path"=>"/"}
+ ~ {:action_time=>0.0052, :after_filters_time=>1.4e-05, :before_filters_time=>2.0e-05}
+ ~ Cookie set: _session_id => ad6567ebcb7da714505d969c968a4f16 -- {"path"=>"/"}
+ ~ {:action_time=>0.004524, :after_filters_time=>1.2e-05, :before_filters_time=>2.8e-05}
+ ~ Cookie set: _session_id => 13f82075c1c615e07f15ee6f7399e048 -- {"path"=>"/"}
+ ~ {:action_time=>0.003892, :after_filters_time=>1.2e-05, :before_filters_time=>1.0e-05}
+ ~ Cookie set: _session_id => 35b86082d3d1e8c85b94fa0bb6d6b141 -- {"path"=>"/"}
+ ~ {:action_time=>0.006059, :after_filters_time=>1.4e-05, :before_filters_time=>2.3e-05}
+ ~ Cookie set: _session_id => 1d9b7e82b6d13bbb740f32f733626e67 -- {"path"=>"/"}
+ ~ {:action_time=>0.004528, :after_filters_time=>1.3e-05, :before_filters_time=>1.4e-05}
+ ~ Cookie set: _session_id => 269198a5316ffd4d88a871e1fe7c54e2 -- {"path"=>"/"}
+ ~ {:action_time=>0.00528, :after_filters_time=>1.5e-05, :before_filters_time=>1.5e-05}
+ ~ Cookie set: _session_id => c0bf5668bce91007f7e1c4e738d34207 -- {"path"=>"/"}
+ ~ {:action_time=>0.004972, :after_filters_time=>1.2e-05, :before_filters_time=>1.3e-05}
+ ~ Cookie set: _session_id => 4bb767793c794b683f6e71dc638618ee -- {"path"=>"/"}
+ ~ {:action_time=>0.00622, :after_filters_time=>1.3e-05, :before_filters_time=>1.9e-05}
+ ~ Cookie set: _session_id => f5c8deb9ac85c2bbad190556a537b41e -- {"path"=>"/"}
+ ~ {:action_time=>0.00597, :after_filters_time=>1.4e-05, :before_filters_time=>1.9e-05}
+ ~ Cookie set: _session_id => 418b70de4ab37845bc359477ed76a900 -- {"path"=>"/"}
+ ~ {:action_time=>0.006186, :after_filters_time=>1.4e-05, :before_filters_time=>1.9e-05}
+ ~ Cookie set: _session_id => eadd2099fdfc6473a94467e1e45cb102 -- {"path"=>"/"}
+ ~ {:action_time=>0.005466, :after_filters_time=>1.1e-05, :before_filters_time=>1.3e-05}
+ ~ Using in-memory sessions; sessions will be lost whenever the server stops.
+ ~ Cookie set: _session_id => cb9b096e18616088a1d5eb756bb7fca1 -- {"path"=>"/"}
+ ~ {:action_time=>0.008684, :after_filters_time=>1.3e-05, :before_filters_time=>1.3e-05}
+ ~ Cookie set: _session_id => 2b91a71bc40d2386b72fd602c4462886 -- {"path"=>"/"}
+ ~ {:action_time=>0.006787, :after_filters_time=>1.3e-05, :before_filters_time=>1.7e-05}
+ ~ Cookie set: _session_id => 17aa7c32f8e9c669950512ff94d2ca4a -- {"path"=>"/"}
+ ~ {:action_time=>0.008408, :after_filters_time=>1.4e-05, :before_filters_time=>1.8e-05}
+ ~ Cookie set: _session_id => 79908f5f99b495ffabb32aab0f0fc2c8 -- {"path"=>"/"}
+ ~ Redirecting to: /scaffolds/blogs/1184
+ ~ {:action_time=>0.143191, :after_filters_time=>1.5e-05, :before_filters_time=>2.1e-05}
+ ~ Cookie set: _session_id => 20d4aaa54c7d65188c84b577fc2fae63 -- {"path"=>"/"}
+ ~ {:action_time=>0.006518, :after_filters_time=>1.4e-05, :before_filters_time=>2.3e-05}
+ ~ Cookie set: _session_id => 9652a601d010ae600b8eac3bfa666c67 -- {"path"=>"/"}
+ ~ Redirecting to: /scaffolds/blogs/1187
+ ~ {:action_time=>0.011374, :after_filters_time=>2.3e-05, :before_filters_time=>1.4e-05}
+ ~ Cookie set: _session_id => 1b13b305b6f08b64aec3b2a2d1355c13 -- {"path"=>"/"}
+ ~ Redirecting to: /scaffolds/blogs
+ ~ {:action_time=>0.004934, :after_filters_time=>2.6e-05, :before_filters_time=>1.5e-05}
+ ~ Cookie set: _session_id => f742d32057b2d73a9ce425417c255404 -- {"path"=>"/"}
+ ~ {:action_time=>0.00877, :after_filters_time=>1.3e-05, :before_filters_time=>2.2e-05}
+ ~ Cookie set: _session_id => c42969b49db347216689baf14969cc97 -- {"path"=>"/"}
+ ~ {:action_time=>0.00928, :after_filters_time=>1.3e-05, :before_filters_time=>2.0e-05}
+ ~ Cookie set: _session_id => 1dd723e60c4f3611923a79a267f5dcaa -- {"path"=>"/"}
+ ~ {:action_time=>0.005119, :after_filters_time=>1.4e-05, :before_filters_time=>2.3e-05}
+ ~ Cookie set: _session_id => abd3d1342cff8d31cba79f3884bf185e -- {"path"=>"/"}
+ ~ {:action_time=>0.005032, :after_filters_time=>1.3e-05, :before_filters_time=>1.7e-05}
+ ~ Cookie set: _session_id => e5bda506598c57cb9891b25b3efee1de -- {"path"=>"/"}
+ ~ {:action_time=>0.005083, :after_filters_time=>1.3e-05, :before_filters_time=>1.6e-05}
+ ~ Cookie set: _session_id => d5f400d7d014cc8fe7cdc6ded8efdff5 -- {"path"=>"/"}
+ ~ {:action_time=>0.00468, :after_filters_time=>1.3e-05, :before_filters_time=>1.2e-05}
+ ~ Cookie set: _session_id => 214ad1b9222e734c2e6cf9c92a985af7 -- {"path"=>"/"}
+ ~ {:action_time=>0.005508, :after_filters_time=>2.6e-05, :before_filters_time=>4.4e-05}
+ ~ Cookie set: _session_id => 912ce26b88808d2dad6dda9d3bf371ea -- {"path"=>"/"}
+ ~ {:action_time=>0.004855, :after_filters_time=>1.2e-05, :before_filters_time=>1.5e-05}
+ ~ Cookie set: _session_id => 64ee6d36440a048dfe0d14a90055cd8d -- {"path"=>"/"}
+ ~ {:action_time=>0.004351, :after_filters_time=>1.3e-05, :before_filters_time=>1.6e-05}
+ ~ Cookie set: _session_id => ad8cd5e7bd1135b29906a80231ed8a86 -- {"path"=>"/"}
+ ~ {:action_time=>0.00511, :after_filters_time=>1.3e-05, :before_filters_time=>1.3e-05}
+ ~ Cookie set: _session_id => e756700f32584af1a52b34598d4c6aaf -- {"path"=>"/"}
+ ~ {:action_time=>0.006062, :after_filters_time=>1.3e-05, :before_filters_time=>2.3e-05}
+ ~ Cookie set: _session_id => 6f196b10b867bf42dd069920c85e5a1a -- {"path"=>"/"}
+ ~ {:action_time=>0.006438, :after_filters_time=>1.4e-05, :before_filters_time=>2.9e-05}
+ ~ Cookie set: _session_id => 44641c3b689cbaf1eb032524621cce51 -- {"path"=>"/"}
+ ~ {:action_time=>0.00599, :after_filters_time=>1.4e-05, :before_filters_time=>1.5e-05}
+ ~ Cookie set: _session_id => 484e25422790a9f88ac996c9156e1f46 -- {"path"=>"/"}
+ ~ {:action_time=>0.00499, :after_filters_time=>1.4e-05, :before_filters_time=>1.3e-05}

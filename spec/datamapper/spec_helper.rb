@@ -3,12 +3,13 @@
 
 $TESTING=true
 __DIR__ = File.dirname(__FILE__)
-$:.push File.join(__DIR__, '..', 'lib')
+$:.push File.join(__DIR__, '..', '..', 'lib')
 
 require 'rubygems'
 require 'merb-core'
 require 'spec'
 require 'data_mapper'
+require 'activerecord'
 require 'ruby-debug'
 
 DataMapper::Persistence.auto_migrate!

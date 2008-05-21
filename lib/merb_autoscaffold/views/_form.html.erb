@@ -1,12 +1,16 @@
 <dl>
   <% model.class.scaf_columns.each do |column| %>
 
-    <% next if model.class.scaf_foreign_keys.include?( column.name ) %>
+    <%
+      # Do not display a form field for a foreign key.  Instead,
+      # display a select option below.
+      next if model.class.scaf_foreign_keys.include?( column.name )
+    %>
 
     <dt><%= column.name %></dt>
     <dd>
 
-      <% if column.options[:serial] %>
+      <% if model.class.scaf_serial_columns.include?( column ) %>
         <%= model.send( column.name ) || '&nbsp' %>
 
       <% else %>

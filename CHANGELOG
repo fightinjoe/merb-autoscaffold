@@ -1,3 +1,7 @@
+0.2.0
+ - Controller and View tests
+ - Support for DataMapper 0.3.0 and ActiveRecord
+
 0.1.2
  - Support added for habtm relationships
  - New Merbivore-styled layout

@@ -6,12 +6,13 @@
   #
   # association<DataMapper::Associations::BelongsToAssociation> - the association to display
   # model<DataMapper::Base> - the model which belongs to the object being selected
+  foreign_key = model.class.scaf_foreign_key_name( association )
 %>
-<select name="model[<%= association.foreign_key_name %>]">
-  <% selected_value = model.send( association.foreign_key_name ) %>
+<select name="model[<%= foreign_key %>]">
+  <% selected_value = model.send( foreign_key ) %>
 
   <option value=""></option>
-  <% for obj in association.constant.all %>
+  <% for obj in find_all( association.klass ) %>
     <option value="<%= obj.id %>"<%= ' selected="selected"' if obj.id == selected_value %>>
       <%= obj.try(:title) || obj.try(:name) || "#{ obj.class.to_s } ##{ obj.id }" %>
     </option>
