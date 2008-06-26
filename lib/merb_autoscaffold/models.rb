@@ -19,6 +19,11 @@ module MerbAutoScaffold
           extension = case model.new
             # wanted to use klass.superclass here, but the case statment seems to be checking the
             # class of klass.superclass instead of an equality check
+            #
+            # note: once the internals of Merb stabalize, use Merb's tracking of ORMs
+            # to perform this test.
+            # 0.9.3 - Merb.generator_scope.include?(:datamapper)
+            # 0.9.4 - Merb.orm_generator_scope == :datamapper
             when ActiveRecord::Base then MerbAutoScaffold::ORMs::ActiveRecord
             when DataMapper::Base   then MerbAutoScaffold::ORMs::DataMapper
             else raise "Merb AutoScaffold does not currently support the #{ model.class.superclass } ORM"
@@ -32,3 +37,8 @@ module MerbAutoScaffold
     end
   end
 end
+
+# These empty class definitions are necessary in order for the above where-clause to not fail when
+# one of the ORMs is not present.
+module ActiveRecord; class Base; end; end
+module DataMapper;   class Base; end; end
